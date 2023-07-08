@@ -3,7 +3,7 @@ title               : Alessio Sordo
 description         : >-
                       I'm Alessio, a computer engineering student and this is my personal website.
                       Take a look around, you're more than welcome!
-baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+#baseurl             : ""                             # Comment if you are hosting your site at <your-username>.github.io directly
 repository          : alesordo/alesordo.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 # remote_theme        : YoussefRaafatNasry/portfolYOU
 open_new_tab        : true                             # Opens external URLs in new tab (works for posts, projects and navbar only)
