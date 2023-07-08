@@ -1,0 +1,20 @@
+# Local Site Directories
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby Gems
+.bundle
+Gemfile.lock
+*.gem
+
+# Log Files
+*.log
+
+# Design Files
+*.psd
+*.ai
+
+# IntelliJ
+.idea

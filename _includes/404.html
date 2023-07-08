@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<!-- 404 page by https://codepen.io/code2rithik/pen/PoWQYGa -->
+
+<html class="error-html" lang="en">
+
+{% include head.html %}
+
+<body class="error-body">
+
+  <div class="error-noise"></div>
+  <div class="error-overlay"></div>
+  <div class="error-terminal">
+    <h1>Error <span class="errorcode">404</span></h1>
+    <p class="error-output">The page you are looking for might have been removed, had its name changed or is temporarily unavailable.</p>
+    <p class="error-output">Please try to <a id="error-link" href="{{ site.baseurl }}/">return to the homepage</a>.</p>
+    <p class="error-output">Good luck.</p>
+  </div>
+  
+</body>
+
+</html>

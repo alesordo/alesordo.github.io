@@ -1,0 +1,66 @@
+// Fine Circle Responsive Image
+// Inspired by https://stackoverflow.com/a/6615994/10194811
+
+#container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+// #dummy {
+//   padding-top: 100%; /* 1:1 aspect ratio */
+// }
+
+// #element {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+// }
+
+.circle-wrapper{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.circle-image{
+  
+  padding-top:50%;
+  width: 50%;
+  height: 50%;
+  background-image: url('https://i.imgur.com/uyDNQnn.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+  border-radius: 50%
+}
+
+.center-row {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.viewport-height {
+  height: 100vh;
+  overflow: hidden;
+}
+
+// .circle-image{
+//   display: block;
+//   width: 100%;
+//   height: auto;
+//   object-fit:cover;
+// }
+
+// .circle-image {
+//   width: 50%;
+//   height: 50%;
+//   border-radius: 50%;
+//   object-fit: cover;
+//   object-position: center;
+// }
