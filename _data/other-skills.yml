@@ -1,7 +1,11 @@
-- name: Adobe Photoshop
-  percentage: 95
-  color: info
+- name: Git
+  percentage: 75
+  color: dark
 
-- name: Adobe Illustrator
-  percentage: 90
+- name: IoT systems development
+  percentage: 70
   color: success
+
+- name: Machine Learning and AI
+  percentage: 60
+  color: primary

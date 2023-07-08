@@ -7,7 +7,7 @@ function showGreeting() {
     if (hour >= 5 && hour < 12) {
         greeting = "good morning ☕️";
     } else if (hour >= 12 && hour < 18) {
-        greeting = "good afternoon 🤸";
+        greeting = "good afternoon ☀️";
     } else if(hour >= 18 && hour < 24){
         greeting = "good evening 🌃";
     } else{
