@@ -1,8 +1,8 @@
 <div class="col-lg">
 
-  <h2 class="mb-3">{{ include.title }}</h2>
+  <h4 class="mb-3 mt-4">{{ include.title }}</h4>
 
-  {% for skill in include.source %}
+  {%- for skill in include.source -%}
 
   <div class="row justify-content-between align-items-center">
     <div class="col-10">
@@ -23,6 +23,6 @@
     </div>
   </div>
 
-  {% endfor %}
+  {%- endfor -%}
 
 </div>

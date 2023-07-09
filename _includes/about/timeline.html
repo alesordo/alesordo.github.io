@@ -1,10 +1,10 @@
 <div class="col mt-4">
-  <h2 class="mt-1">{{ include.title }}</h2>
+  <h4 class="mt-1 mb-2">{{ include.title }}</h4>
   <div class="timeline-body bg-themed">
     {% for item in site.data.timeline %}
       <div class="timeline-item">
         <div class="content">
-          <h3>{{ item.title }}</h3>
+          <h5>{{ item.title }}</h5>
           <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
           <p>{{ item.description }}</p>
         </div>

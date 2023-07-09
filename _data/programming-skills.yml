@@ -1,6 +1,6 @@
 - name: C
   percentage: 80
-  color: dark
+  color: secondary
 
 - name: Python
   percentage: 70
@@ -11,5 +11,5 @@
   color: warning
 
 - name: Java
-  percentage: 65
+  percentage: 60
   color: info

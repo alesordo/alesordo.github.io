@@ -1,11 +1,11 @@
 - name: Git
   percentage: 75
-  color: dark
+  color: secondary
 
 - name: IoT systems development
   percentage: 70
   color: success
 
 - name: Machine Learning and AI
-  percentage: 60
+  percentage: 65
   color: primary
