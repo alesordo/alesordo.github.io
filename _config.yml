@@ -6,7 +6,7 @@ description         : >-
 #baseurl             : ""                             # Comment if you are hosting your site at <your-username>.github.io directly
 repository          : alesordo/alesordo.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 # remote_theme        : YoussefRaafatNasry/portfolYOU
-open_new_tab        : true                             # Opens external URLs in new tab (works for posts, projects and navbar only)
+open_new_tab        : true                             # Opens external URLs in new tab (works for posts, projects, navbar and footer only)
 source              : .
 layouts_dir         : _layouts
 includes_dir        : _includes

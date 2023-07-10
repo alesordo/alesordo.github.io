@@ -1,7 +1,7 @@
 
 <div class="card-columns m-3 mt-5">
 
-  <!-- Remote Projects -->
+  <!-- Remote Projects with auto-generated card -->
   {% for remote_project in page.remote_projects %}
 
     {%- for repo in site.github.public_repositories -%}
@@ -13,10 +13,12 @@
         
         {%- capture titlecase -%}
           {%- for word in words -%}
-            {{ word | capitalize | append: ' ' }}
+            {{ word | append: ' ' }}
           {%- endfor -%}
         {%- endcapture -%}
 
+        {%- assign project_website = "github" -%}
+        {%- assign project_website_title = "GitHub repository" -%}
         {%- assign project_type  = "remote" -%}
         {%- assign project_id    = project.name -%}
         {%- assign project_img   = false -%}
@@ -34,15 +36,20 @@
 
   {% endfor %}
 
-  <!-- Local Projects -->
+  <!-- Local/Remote Projects with custom card -->
   {% for project in site.projects %}
 
-    {%- assign project_type  = "local" -%}
+    {%- assign project_type  = project.project_type | "local" -%}
     {%- assign project_id    = project.name | slugify -%}
     {%- assign project_img   = project.image -%}
     {%- assign project_name  = project.name -%}
     {%- assign project_desc  = project.description -%}
     {%- assign project_tools = project.tools -%}
+
+    {%- if project_type == "remote" -%}
+      {%- assign project_website = project.website | "github" -%}
+      {%- assign project_website_title = project.website_title | "GitHub repository" -%}
+    {%- endif -%}
 
     {%- if project.external_url -%}
       {%- assign project_url = project.external_url -%}

@@ -11,7 +11,7 @@ function showGreeting() {
     } else if(hour >= 18 && hour < 24){
         greeting = "good evening 🌃";
     } else{
-        greeting = "Welcome, night owl 🦉"
+        greeting = "welcome, night owl 🦉"
     }
 
     document.getElementById("greeting").innerHTML = greeting;

@@ -6,7 +6,7 @@
     <div class="card-body">
       <h5 id="{{ project_id }}-name" class="card-title">
           {%- if project_type == "remote" -%}
-          <i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="GitHub Repository"></i> |&nbsp;
+          <i class="fab fa-{{ project_website }}" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="{{ project_website_title }}"></i> |&nbsp;
           {%- endif -%}
         {{ project_name }}
       </h5>
