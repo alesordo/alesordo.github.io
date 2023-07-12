@@ -7,7 +7,7 @@ weight: 3
 
 ## **About Me**
 
-I'm Alessio, a 24-year-old Computer and Automation Engineering student from Italy. :wave:
+I'm Alessio, a 24-year-old Computer and Automation Engineering student from Italy :wave:.
 
 I'll complete my studies in October 2023 and am currently employed as an intern at the Nimbus Research Centre in Cork - Ireland.
 
@@ -28,4 +28,8 @@ You can find my main skills and experiences below. Thank you for reading.
 
 <div class="row">
 {% include about/timeline.html title="Working Experience"%}
+</div>
+
+<div class="row">
+{% include about/timeline-edu.html title="Education"%}
 </div>

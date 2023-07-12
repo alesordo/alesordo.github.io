@@ -2,14 +2,21 @@
   from: 04/2023
   to: present
   description: >
-                Internship for master thesis.<br>
+                Project description:<br>
+                Development of an IoT system for monitoring and actuating sanitary waters in critical public
+                buildings, to avoid the formation of harmful bacteria.
+                <h6>Main tasks:</h6>
+                <ul>
+                  <li> Validation of the IoT device structure, based on the ESP32-S3 development board;</li>
+                  <li> Firmware development for the device, using the C framework ESP-IDF;</li>
+                  <li> Setup of the IoT platform, on the cloud hosted commercial solution TagoIO;</li>
+                  <li> Research on possible Machine Learning approaches to correlate temperature and bacteria, for
+                  a more efficient and sustainable flushing pattern.</li>
+                </ul>
                 
 
 - title: Private tutor - GoStudent, Online
   from: 05/2022
   to: present
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  description: Online tutor of math, english and informatics, with more than 100 lessons completed
+               and 10 regular students. Helped also the commercial team with trial lessons for new clients.
