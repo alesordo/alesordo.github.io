@@ -30,9 +30,10 @@
   a:not(.btn):not([class^="carousel-"]):not([class^="list-"]):not(.no-underline) {
     display: inline-block;
     text-decoration: none;
+    color: $danger;
 
     &:hover {
-      color: $primary;
+      color: $danger;
     }
 
     &::after {
@@ -41,7 +42,7 @@
       height: 0.15em;
       margin-top: -0.15em;
       width: 0;
-      background: $primary;
+      background: $danger;
       transition: width 0.35s;
     }
 
@@ -75,7 +76,7 @@
   }
 
   blockquote {
-    border-left: 0.25em solid $primary;
+    border-left: 0.25em solid $danger;
     color: $secondary;
     padding: 0 1em;
   }
@@ -106,7 +107,7 @@
       padding-bottom: 12px;
       font-weight: 500;
       text-align: left;
-      background-color: $primary;
+      background-color: $danger;
       color: white;
     }
 

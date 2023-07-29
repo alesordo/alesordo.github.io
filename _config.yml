@@ -1,7 +1,6 @@
 ### Site Settings ###
 title               : Alessio Sordo
 description         : >-
-                      I'm Alessio, a computer engineering student and this is my personal website.
                       Take a look around, you're more than welcome!
 #baseurl             : ""                             # Comment if you are hosting your site at <your-username>.github.io directly
 repository          : alesordo/alesordo.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
@@ -24,6 +23,7 @@ nav_exclude:                                            # The following paths ar
   - pages/tags.html
   - pages/404.html
   - pages/index.md
+  - pages/about.md
 
 
 ### Author Info ###

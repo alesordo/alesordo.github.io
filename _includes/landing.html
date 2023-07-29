@@ -1,8 +1,8 @@
 <!-- Greetings script -->
 <script src="{{ '/assets/js/greeting.js' | relative_url }}"></script>
 
-<div class="row align-items-center justify-content-center p-4">
-  <div class="col-md-6 text-center">
+<section class="row align-items-center justify-content-center p-4">
+  <div class="col-md-5 text-center">
 
     <!-- Fine Circle Responsive Image -->
     <div class="container">
@@ -16,14 +16,27 @@
   <div class="col-md-6 text-left">
     <div class ="container mt-4">
       <h3 class="font-weight-bold">Ciao! And <span id="greeting">greetings</span></h3>
-      <span class="text-muted">{{ site.description }}</span>
+      <span class="">{{ site.description }}</span>
     </div>
   </div>
-</div>
+</section>
 
 <section class="justify-content-center p-4 align-items-start">
-  <h3 class="font-weight-bold text-center">Main skills</h3>
+  <div class="col-lg-11 mx-auto markdown-body">
+  <h3 class="font-weight-bold text-center">Who am I?</h3>
+  <p>A 24-year-old Computer Science and Automation Engineering student from Italy, passionate about <span class="font-weight-bold">IoT</span> and <span class="font-weight-bold">Machine Learning</span>. 
+    Moreover, I have a basic knowledge of Electronics from the Bachelor’s Degree.<br><br> 
+    During my free time, I enjoy volunteering to help people, running, hiking and cooking; I'm also
+    a big fan of movies and I read books from time to time.<br><br>
+    Take a look at the <a href="/projects">projects</a> I'm most proud of and at my <a href="">CV</a> to get a better
+    overview of the skills listed below. You can
+    also <a href="">contact me</a> if you'd like to have a talk!</p>
+  </div>
+</section>
+
+<section class="justify-content-center p-4 align-items-start">
   <div class="container">
+  <h3 class="font-weight-bold text-center">Main skills</h3>
     <div class="row justify-content-center align-items-center">
       <div class="col-12">
         <div class="big card border-0">

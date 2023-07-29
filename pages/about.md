@@ -13,7 +13,7 @@ I'll complete my studies in October 2023 and am currently employed as an intern 
 
 My current focus is on **IoT**, as I'm fascinated about the big impact that IoT devices can have in peoples' lives. During this internship I'm acquiring experience in programming IoT systems from the device to the platform, including the extraction of data for further analysis. Moreover, I have a basic knowledge of electronics, gained during my Bachelor's Degree.
 
-I also enjoy working in the fields of **Machine Learning** and **Artificial Intelligence**. The ongoing internship will include a Machine Learning stage and my degree included theoretical courses with projects about these topics. For example, I recently realized an object detection system for street signs. Furthermore, my bachelor thesis was focused on using Neural Networks to improve the solution of the Euclidean TSP problem.
+I also enjoy working in the fields of **Machine Learning** and **Artificial Intelligence**. The ongoing internship will include a Machine Learning stage and my degree included theoretical courses with projects about these topics. For example, I recently realized an object detection system for street signs. Furthermore, my bachelor thesis was focused on using Neural Networks to improve the solution of the Euclidean TSP problem [cia](http://google.com).
 
 In my **free time** I like volunteering to help people, running, hiking and cooking. I'm also a big fan of movies and I read books from time to time.
 

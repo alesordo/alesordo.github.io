@@ -1,6 +1,3 @@
-// Fine Circle Responsive Image
-// Inspired by https://stackoverflow.com/a/6615994/10194811
-
 #container {
   display: inline-block;
   position: relative;
@@ -63,9 +60,14 @@
   display: inline-block;
   display: block;
   margin: 0 auto; /* This will center the block-level element */
+
+  @media only screen and (max-width: 767px){
+    max-width: 50px;
+    font-size: 50px;
+  }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 767px){
   .skill{
     padding: 0.5rem;
   }
@@ -76,7 +78,6 @@
   text-decoration: none !important;
   margin: 10px auto;
   justify-content: center;
-  // background-color: #fafafa;
   border-radius: $rounded-borders;
 }
 
@@ -87,7 +88,7 @@
 
 .card-title-skills {
   text-align: center;
-  font-weight: 600;
+  // font-weight: 600;
   margin-top: 0.5rem;
 }
 
@@ -104,18 +105,3 @@
     background-color: rgba(0,0,0,0);
   }
 }
-
-// .circle-image{
-//   display: block;
-//   width: 100%;
-//   height: auto;
-//   object-fit:cover;
-// }
-
-// .circle-image {
-//   width: 50%;
-//   height: 50%;
-//   border-radius: 50%;
-//   object-fit: cover;
-//   object-position: center;
-// }
