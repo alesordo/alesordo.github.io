@@ -19,14 +19,6 @@
 //   right: 0;
 // }
 
-.circle-wrapper{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-}
-
 .circle-image{
   
   padding-top:70%;
@@ -35,7 +27,13 @@
   background-size:cover;
   background-repeat:no-repeat;
   background-position: center;
-  border-radius: 50%
+  border-radius: 50%;
+
+  // Adding a different rule for sizing the image in medium screens
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    padding-top:80%;
+    width: 80%;
+  }
 }
 
 .center-row {
@@ -49,29 +47,56 @@
   overflow: hidden;
 }
 
-.skills {
-  font-size: 3rem;
+.fa-skill {
+  font-size: 60px;
   color: black;
   text-align: center;
-  margin: 1px auto;
-  padding: 1rem;
+  margin: 0 auto;
+  display: inline-block;
+  display: block;
+}
+
+.img-skill{
+  max-width: 60px;
+  height: auto;
+  align-items: center;
+  display: inline-block;
+  display: block;
+  margin: 0 auto; /* This will center the block-level element */
 }
 
 .big.card {
-  margin: 0 auto; /* aggiunge un margine automatico orizzontale per centrare la scheda */
-  // border-radius: $rounded-borders;
+  margin: 0 auto;
   text-decoration: none !important;
   margin: 10px auto;
   justify-content: center;
+  // background-color: #fafafa;
+  border-radius: $rounded-borders;
 }
 
-.card-title {
-  margin: 2px auto;
+.row-skills{
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.card-title-skills {
+  text-align: center;
   font-weight: 600;
+  margin-top: 0.5rem;
 }
 
-.card-img-top {
-  padding: 1rem; /* aggiunge un padding intorno all'icona */
+[data-theme="dark"]{
+  .img-skill{
+    filter: invert(100%);
+  }
+
+  .fa-skill{
+    filter: invert(100%);
+  }
+
+  .big.card{
+    background-color: rgba(0,0,0,0);
+  }
 }
 
 // .circle-image{

@@ -26,6 +26,12 @@ body {
   }
 }
 
+#favicon{
+  @media (prefers-color-scheme: dark) {
+    filter: invert(100%);
+  }
+}
+
 // $custom-colors: (
 //   "blue": #0000FF,
 //   "violet": #8000FF,
