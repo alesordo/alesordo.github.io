@@ -49,6 +49,31 @@
   overflow: hidden;
 }
 
+.skills {
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+  margin: 1px auto;
+  padding: 1rem;
+}
+
+.big.card {
+  margin: 0 auto; /* aggiunge un margine automatico orizzontale per centrare la scheda */
+  // border-radius: $rounded-borders;
+  text-decoration: none !important;
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.card-title {
+  margin: 2px auto;
+  font-weight: 600;
+}
+
+.card-img-top {
+  padding: 1rem; /* aggiunge un padding intorno all'icona */
+}
+
 // .circle-image{
 //   display: block;
 //   width: 100%;

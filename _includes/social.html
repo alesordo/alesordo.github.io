@@ -11,7 +11,8 @@
        {%- if site.open_new_tab -%} target="_blank" {%- endif -%}
        style="color: #{{ unfocused_color }}"
        onMouseOver="this.style.color='#{{ service_data.color }}'"
-       onMouseOut="this.style.color='#{{ unfocused_color }}'">
+       onMouseOut="this.style.color='#{{ unfocused_color }}'"
+       alt="{{ service_data.icon | replace: "fab fa-", "" }}">
       <i class="{{ service_data.icon }} fa-1x"></i>
     </a>
     {%- endif -%}

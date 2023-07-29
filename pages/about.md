@@ -17,14 +17,12 @@ I also enjoy working in the fields of **Machine Learning** and **Artificial Inte
 
 In my **free time** I like volunteering to help people, running, hiking and cooking. I'm also a big fan of movies and I read books from time to time.
 
-You can find my main skills and experiences below. Thank you for reading.
-
 <div class="mb-4"></div>
 
-<div class="row">
+<!-- <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
 {% include about/skills.html title="Other Skills" source=site.data.other-skills %}
-</div>
+</div> -->
 
 <div class="row">
 {% include about/timeline.html title="Working Experience"%}
