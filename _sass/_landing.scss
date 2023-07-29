@@ -51,18 +51,24 @@
   font-size: 60px;
   color: black;
   text-align: center;
-  margin: 0 auto;
-  display: inline-block;
-  display: block;
 }
 
 .img-skill{
   max-width: 60px;
   height: auto;
   align-items: center;
+}
+
+.img-skill, .fa-skill{
   display: inline-block;
   display: block;
   margin: 0 auto; /* This will center the block-level element */
+}
+
+@media only screen and (max-width: 768px){
+  .skill{
+    padding: 0.5rem;
+  }
 }
 
 .big.card {
