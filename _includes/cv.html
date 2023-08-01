@@ -1,0 +1,140 @@
+<!-- Include pdf.js -->
+<script src="{{ '/assets/js/pdf.js' }}"></script>
+
+<div class="container text-center" id="pdf-container" style="min-height: 100%;">
+  <h3>Curriculum Vitae - <a href="{{ '/assets/CV_pic.pdf' }}">open as PDF</a></h3>
+  <div id="viewerContainer align-items-center">
+    <!-- Use a canvas element for the viewer -->
+    <div id="pdf-viewer"></div>
+    <!-- <div id="text-layer" class="text-layer"></div> -->
+  </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col-sm-8">
+        <div class="justify-content-center align-items-center" style="min-height: 100%;">
+      <div class="bs-example">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="../assets/CV_pic.pdf" allowfullscreen="true" style="width: 100%; height: 100vh"></iframe>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<!-- <script>
+const url = '../assets/CV_pic.pdf';
+const scale = 0.2;
+const container = document.getElementById('pdf-container');
+
+   pdfjsLib.getDocument(url).promise.then(function (pdf) {
+     const container = document.getElementById('pdf-container');
+     const textLayerDiv = document.getElementById('text-layer');
+
+     for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+       pdf.getPage(pageNumber).then(function (page) {
+         const viewport = page.getViewport({ scale: scale });
+
+         const pageContainer = document.createElement('div');
+         pageContainer.className = 'pdf-page';
+
+         const canvas = document.createElement('canvas');
+         canvas.className = 'pdf-page-canvas';
+         pageContainer.appendChild(canvas);
+
+         container.appendChild(pageContainer);
+
+         const context = canvas.getContext('2d');
+         canvas.height = viewport.height;
+         canvas.width = viewport.width;
+
+         const renderContext = {
+           canvasContext: context,
+           viewport: viewport
+         };
+
+         page.render(renderContext).promise.then(function () {
+           page.getTextContent().then(function (textContent) {
+             pdfjsLib.renderTextLayer({
+               textContent: textContent,
+               container: textLayerDiv,
+               viewport: viewport
+             });
+           });
+         });
+       });
+     }
+   });
+
+
+function renderPage(pageNumber, canvas, pdf) {
+  pdf.getPage(pageNumber).then(function(page) {
+    const viewport = page.getViewport({ scale: scale });
+
+    const containerScaleFactor = viewport.scale;
+
+    // Set the --scale-factor CSS variable on the container element or parent element
+    container.style.setProperty('--scale-factor', containerScaleFactor);
+
+    const context = canvas.getContext('2d');
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+
+    page.render({
+      canvasContext: context,
+      viewport: viewport
+    }).promise.then(function() {
+      page.getTextContent().then(function(textContent) {
+        pdfjsLib.renderTextLayer({
+          textContent: textContent,
+          container: container,
+          viewport: viewport
+        });
+      });
+    });
+  });
+}
+
+
+</script> -->
+
+<!-- Initialize the pdf.js viewer with your PDF -->
+<script>
+  var url = '../assets/CV_pic.pdf';
+
+  pdfjsLib.getDocument(url).promise.then(function (pdf) {
+    var viewer = document.getElementById('pdf-viewer');
+
+    for (var pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+      var pageContainer = document.createElement('div');
+      pageContainer.className = 'pdf-page';
+
+      var canvas = document.createElement('canvas');
+      canvas.className = 'pdf-page-canvas';
+      pageContainer.appendChild(canvas);
+
+      viewer.appendChild(pageContainer);
+
+      renderPage(pageNumber, canvas, pdf);
+    }
+  });
+
+  function renderPage(pageNumber, canvas, pdf) {
+    pdf.getPage(pageNumber).then(function (page) {
+      var viewport = page.getViewport({ scale: 0.2 });
+      var scale = canvas.clientWidth / viewport.width;
+
+      var scaledViewport = page.getViewport({ scale: scale });
+
+      var context = canvas.getContext('2d');
+      canvas.height = scaledViewport.height;
+      canvas.width = scaledViewport.width;
+
+      var renderContext = {
+        canvasContext: context,
+        viewport: scaledViewport,
+      };
+
+      page.render(renderContext);
+    });
+  }
+</script>
