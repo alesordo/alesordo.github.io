@@ -2,7 +2,7 @@
 <script src="{{ '/assets/js/pdf.js' }}"></script>
 
 <div class="container text-center" id="pdf-container" style="min-height: 100%;">
-  <h3>Curriculum Vitae - <a href="{{ '/assets/CV_pic.pdf' }}">open as PDF</a></h3>
+  <h4 class="font-weight-bold">Curriculum Vitae - <a target="_blank" href="{{ '/assets/Alessio_Sordo_CV.pdf' }}">open as PDF</a></h4>
   <div id="viewerContainer align-items-center">
     <!-- Use a canvas element for the viewer -->
     <div id="pdf-viewer"></div>
@@ -15,14 +15,14 @@
         <div class="justify-content-center align-items-center" style="min-height: 100%;">
       <div class="bs-example">
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="../assets/CV_pic.pdf" allowfullscreen="true" style="width: 100%; height: 100vh"></iframe>
+          <iframe class="embed-responsive-item" src="../assets/Alessio_Sordo_CV.pdf" allowfullscreen="true" style="width: 100%; height: 100vh"></iframe>
         </div>
       </div>
     </div>
   </div> -->
 
 <!-- <script>
-const url = '../assets/CV_pic.pdf';
+const url = '../assets/Alessio_Sordo_CV.pdf';
 const scale = 0.2;
 const container = document.getElementById('pdf-container');
 
@@ -99,7 +99,7 @@ function renderPage(pageNumber, canvas, pdf) {
 
 <!-- Initialize the pdf.js viewer with your PDF -->
 <script>
-  var url = '../assets/CV_pic.pdf';
+  var url = '../assets/Alessio_Sordo_CV.pdf';
 
   pdfjsLib.getDocument(url).promise.then(function (pdf) {
     var viewer = document.getElementById('pdf-viewer');
