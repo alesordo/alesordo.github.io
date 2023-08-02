@@ -1,0 +1,32 @@
+.fa-circle-xmark{
+    color: $danger;
+    font-size: 75px;
+}
+
+#error-link {
+    display: inline-block;
+    text-decoration: none;
+    color: $danger;
+
+    &:hover {
+      color: $danger;
+    }
+
+    &::before {
+        content: "";
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 0.15em;
+      margin-top: -0.15em;
+      width: 0;
+      background: $danger;
+      transition: width 0.35s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
