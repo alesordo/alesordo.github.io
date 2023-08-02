@@ -10,9 +10,11 @@ It is based on the [portfolYOU](https://github.com/YoussefRaafatNasry/portfolYOU
 - Changed the footer layout;
 - Removed wow.js for animations, as it's overkill and not needed for my use;
 - Changed the theme color from Bootstrap's primary to danger;
-- Changed the landing page layout;
+- Changed the landing page by adding a brief about me and my main skills;
 - Added a greetings script on the landing page, to greet users based on their local time - inspired by [Miika Tuominen's website](https://miikat.dev/);
-- General customization of the theme on the _config.yml file.
+- General customization of the theme on the _config.yml file;
+- Removed 'About me' page;
+- Added CV and Contact pages.
 
 ## How to run this theme
 If you want to run a local demo of my website on your computer, first, clone the repository.
