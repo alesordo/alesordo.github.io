@@ -29,3 +29,30 @@
   margin-top: 4em;
   margin-right: 2em;
 }
+
+#privacy-link {
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    color: $danger;
+  }
+
+  &::before {
+      content: "";
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 0.15em;
+    margin-top: -0.15em;
+    width: 0;
+    background: $danger;
+    transition: width 0.35s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
