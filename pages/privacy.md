@@ -224,7 +224,7 @@ We may need to share your personal information in the following situations:
 
   
 
-##### 5 DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
+##### 5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
 
   
 
@@ -236,7 +236,7 @@ We may use cookies and similar tracking technologies (like web beacons and pixel
 
   
 
-##### 6 HOW DO WE HANDLE YOUR SOCIAL LOGINS?
+##### 6. HOW DO WE HANDLE YOUR SOCIAL LOGINS?
 
   
 
@@ -268,7 +268,7 @@ When we have no ongoing legitimate business need to process your personal inform
 
   
 
-##### 8 DO WE COLLECT INFORMATION FROM MINORS?
+##### 8. DO WE COLLECT INFORMATION FROM MINORS?
 
   
 
