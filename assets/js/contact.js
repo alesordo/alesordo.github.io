@@ -12,8 +12,7 @@
                         var submitBtn = $('button[name="submit"]')[0];
                         submitBtn.disabled = true;
                         submitBtn.innerHTML = 'Sending...';
-
-                        if (form.checkValidity() === false) {
+                        if (form.checkValidity() === false || form.address.value.length) {
                             submitBtn.disabled = false;
                             submitBtn.innerHTML = 'Send';
                             event.preventDefault();
