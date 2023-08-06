@@ -224,4 +224,4 @@ var remark_config = {
 
 **Note:** testing on localhost worked, but I couldn't add comments. Make sure you test everything online.
 
-And that's all! After around 3 days of research the comments are up and running, as you can see below. Thank you for reading and... leave a comment :blink:
+And that's all! After around 3 days of research the comments are up and running, as you can see below. Thank you for reading and... leave a comment :wink:

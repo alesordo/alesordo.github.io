@@ -66,11 +66,6 @@ collections:
     permalink: /projects/:name
 
 
-### Disqus ###
-disqus:
-  shortname: your-short-name-disqus                     # Your website Shortname on disqus
-
-
 ### Analytics ###
 analytics:
   enabled: false                                        # Set true to enable analytics
@@ -99,7 +94,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      comments: false                                   # Set to true to enable disqus comments
+      comments: true                                   # Set to true to enable disqus comments
 
 
 ### Exclude from processing ###

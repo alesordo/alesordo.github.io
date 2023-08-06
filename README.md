@@ -14,7 +14,9 @@ It is based on the [portfolYOU](https://github.com/YoussefRaafatNasry/portfolYOU
 - Added a greetings script on the landing page, to greet users based on their local time - inspired by [Miika Tuominen's website](https://miikat.dev/);
 - General customization of the theme on the _config.yml file;
 - Removed 'About me' page;
-- Added CV and Contact pages.
+- Added CV and Contact pages;
+- Added Privacy policy (thanks to [Termly](https://termly.io/products/privacy-policy-generator/));
+- Added Remark42 comments instead of Disqus.
 
 ## How to run this theme
 If you want to run a local demo of my website on your computer, first, clone the repository.
