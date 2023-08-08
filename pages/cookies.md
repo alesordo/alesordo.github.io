@@ -2,6 +2,8 @@
 layout: page
 title: Cookies policy
 permalink: /cookies
+description: Website cookie policy.
+sitemap: false
 ---
 
 ## Cookie Policy for Alessio Sordo

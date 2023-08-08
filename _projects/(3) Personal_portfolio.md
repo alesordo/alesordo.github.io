@@ -7,4 +7,5 @@ external_url: https://github.com/alesordo/alesordo.github.io
 project_type: remote
 website: github
 website_title: GitHub repository
+sitemap: false
 ---

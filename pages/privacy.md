@@ -2,6 +2,8 @@
 layout: page
 title: Privacy policy
 permalink: /privacy
+description: Website privacy policy.
+sitemap: false
 ---
 
 ## PRIVACY POLICY

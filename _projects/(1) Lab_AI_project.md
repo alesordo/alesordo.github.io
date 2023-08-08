@@ -8,4 +8,5 @@ external_url: https://www.kaggle.com/code/alesordo/gtsrb-classification-and-boun
 project_type: remote
 website: kaggle
 website_title: Kaggle notebook
+sitemap: false
 ---

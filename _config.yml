@@ -12,11 +12,14 @@ layouts_dir         : _layouts
 includes_dir        : _includes
 sass:
   sass_dir: ./_sass
+logo                : assets/big-logo.png
 
 
 ### Plugins ###
 plugins:
   - jemoji
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 
 ### Navbar Settings ###
@@ -34,7 +37,8 @@ nav_exclude:                                            # The following paths ar
 ### Author Info ###
 author:
   name              : Alessio Sordo
-  image             : assets/profile-picture.webp
+  picture           : assets/profile-picture.webp
+  url               : https://alesordo.com
 #  behance           : your_username
 # dribbble          : your_username
   email             : /contact
@@ -55,6 +59,12 @@ author:
 # youtube           : your_channel_name
 # keybase           : your_username
 
+### Social SEO###
+social:
+  name: Alessio Sordo
+  links:
+    - https://www.linkedin.com/in/alessio-sordo
+    - https://github.com/alesordo
 
 ### Posts ###
 permalink: /blog/:title
@@ -95,7 +105,11 @@ defaults:
       path: ""
       type: "posts"
     values:
-      comments: true                                   # Set to true to enable disqus comments
+      comments: true                                   # Set to true to enable Remark42 comments
+  - scope:
+      path:            "assets"
+    values:
+      sitemap:         false
 
 
 ### Exclude from processing ###
