@@ -8,12 +8,12 @@ permalink: /privacy/
 
 **Last updated August 04, 2023**
 
-This privacy notice for Alessio Sordo ( "**we**," "**us**," or "**our**" ), describes how and why we might collect, store, use, and/or share ("**process**") your information when you use our services ("**Services**"), such as when you:
+This privacy notice for Alessio Sordo ("**we**," "**us**," or "**our**"), describes how and why we might collect, store, use, and/or share ("**process**") your information when you use our services ("**Services**"), such as when you:
 
 *   Visit our website at [https://www.alesordo.com/](https://www.alesordo.com/) , or any website of ours that links to this privacy notice
 *   Engage with us in other related ways, including any sales, marketing, or events
 
-**Questions or concerns?** Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at [privacy@alesordo.com](mailto:privacy.alesordo.com).
+**Questions or concerns?** Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at [privacy@alesordo.com](mailto:privacy@alesordo.com).
 
   
 
@@ -51,14 +51,11 @@ This privacy notice for Alessio Sordo ( "**we**," "**us**," or "**our**" ), desc
 
   
 
-**How do you exercise your rights?** The easiest way to exercise your rights is by visiting [https://www.alesordo.com/contact/](https://www.alesordo.com/contact/) , or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws.
+**How do you exercise your rights?** The easiest way to exercise your rights is by visiting [https://www.alesordo.com/contact/](/contact) , or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws.
 
   
 
 Want to learn more about what Alessio Sordo does with any information we collect? [Review the privacy notice in full](#table-of-contents).
-
-  
-
   
 
 ### TABLE OF CONTENTS
@@ -116,16 +113,14 @@ We collect personal information that you voluntarily provide to us when you expr
 **Personal Information Provided by You.** The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following:
 
 *   names
-
 *   email addresses
-
 *   contact or authentication data
 
 **Sensitive Information.** We do not process sensitive information.
 
   
 
-**Social Media Login Data.** We may provide you with the option to register with us using your existing social media account details, like your Facebook, Twitter, or other social media account. If you choose to register in this way, we will collect the information described in the section called "[HOW DO WE HANDLE YOUR SOCIAL LOGINS?](#6-how-do-we-handle-your-social-logins) " below.
+**Social Media Login Data.** We may provide you with the option to register with us using your existing social media account details, like your GitHub, Telegram, or other social media account. If you choose to register in this way, we will collect the information described in the section called [HOW DO WE HANDLE YOUR SOCIAL LOGINS?](#6-how-do-we-handle-your-social-logins) below.
 
   
 
@@ -144,9 +139,7 @@ All personal information that you provide to us must be true, complete, and accu
 **We process your personal information for a variety of reasons, depending on how you interact with our Services, including:**
 
 *   **To respond to user inquiries/offer support to users.** We may process your information to respond to your inquiries and solve any potential issues you might have with the requested service.
-
 *   **To send administrative information to you.** We may process your information to send you details about our products and services, changes to our terms and policies, and other similar information.
-
 *   **To save or protect an individual's vital interest.** We may process your information when necessary to save or protect an individual’s vital interest, such as to prevent harm.
 
   
@@ -166,12 +159,8 @@ _**If you are located in the EU or UK, this section applies to you.**_
 The General Data Protection Regulation (GDPR) and UK GDPR require us to explain the valid legal bases we rely on in order to process your personal information. As such, we may rely on the following legal bases to process your personal information:
 
 *   **Consent.** We may process your information if you have given us permission (i.e., consent) to use your personal information for a specific purpose. You can withdraw your consent at any time. Learn more about [withdrawing your consent](#withdrawing-your-consent).
-
 *   **Performance of a Contract.** We may process your personal information when we believe it is necessary to fulfill our contractual obligations to you, including providing our Services or at your request prior to entering into a contract with you.
-
-*   **Legal Obligations.** We may process your information where we believe it is necessary for compliance with our legal obligations, such as to cooperate with a law enforcement body or regulatory agency, exercise or defend our legal rights, or disclose your information as evidence in litigation in which we are involved.  
-    
-
+*   **Legal Obligations.** We may process your information where we believe it is necessary for compliance with our legal obligations, such as to cooperate with a law enforcement body or regulatory agency, exercise or defend our legal rights, or disclose your information as evidence in litigation in which we are involved.
 *   **Vital Interests.** We may process your information where we believe it is necessary to protect your vital interests or the vital interests of a third party, such as situations involving potential threats to the safety of any person.
 
   
@@ -187,25 +176,15 @@ We may process your information if you have given us specific permission (i.e., 
 In some exceptional cases, we may be legally permitted under applicable law to process your information without your consent, including, for example:
 
 *   If collection is clearly in the interests of an individual and consent cannot be obtained in a timely way
-
 *   For investigations and fraud detection and prevention
-
 *   For business transactions provided certain conditions are met
-
 *   If it is contained in a witness statement and the collection is necessary to assess, process, or settle an insurance claim
-
 *   For identifying injured, ill, or deceased persons and communicating with next of kin
-
 *   If we have reasonable grounds to believe an individual has been, is, or may be victim of financial abuse
-
 *   If it is reasonable to expect collection and use with consent would compromise the availability or the accuracy of the information and the collection is reasonable for purposes related to investigating a breach of an agreement or a contravention of the laws of Canada or a province
-
 *   If disclosure is required to comply with a subpoena, warrant, court order, or rules of the court relating to the production of records
-
 *   If it was produced by an individual in the course of their employment, business, or profession and the collection is consistent with the purposes for which the information was produced
-
 *   If the collection is solely for journalistic, artistic, or literary purposes
-
 *   If the information is publicly available and is specified by the regulations
 
   
@@ -232,7 +211,7 @@ We may need to share your personal information in the following situations:
 
   
 
-We may use cookies and similar tracking technologies (like web beacons and pixels) to access or store information. Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Notice : [http://www.alesordo.com/cookies](http://www.alesordo.com/cookies) .
+We may use cookies and similar tracking technologies (like web beacons and pixels) to access or store information. Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Notice: [http://www.alesordo.com/cookies](/cookies).
 
   
 
@@ -276,7 +255,7 @@ When we have no ongoing legitimate business need to process your personal inform
 
   
 
-We do not knowingly solicit data from or market to children under 18 years of age. By using the Services, you represent that you are at least 18 or that you are the parent or guardian of such a minor and consent to such minor dependent’s use of the Services. If we learn that personal information from users less than 18 years of age has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18, please contact us at [privacy@alesordo.com](mailto:privacy.alesordo.com) .
+We do not knowingly solicit data from or market to children under 18 years of age. By using the Services, you represent that you are at least 18 or that you are the parent or guardian of such a minor and consent to such minor dependent’s use of the Services. If we learn that personal information from users less than 18 years of age has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18, please contact us at [privacy@alesordo.com](mailto:privacy@alesordo.com) .
 
   
 
@@ -288,7 +267,7 @@ We do not knowingly solicit data from or market to children under 18 years of ag
 
   
 
-In some regions (like the EEA, UK, and Canada), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; and (iv) if applicable, to data portability. In certain circumstances, you may also have the right to object to the processing of your personal information. You can make such a request by contacting us by using the contact details provided in the section "[HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#14-how-can-you-contact-us-about-this-notice) " below.
+In some regions (like the EEA, UK, and Canada), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; and (iv) if applicable, to data portability. In certain circumstances, you may also have the right to object to the processing of your personal information. You can make such a request by contacting us by using the contact details provided in the section [HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#14-how-can-you-contact-us-about-this-notice) below.
 
   
 
@@ -303,7 +282,7 @@ If you are located in Switzerland, you may contact the [Federal Data Protection 
   
 
 ###### **Withdrawing your consent:**
-If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section "[HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#14-how-can-you-contact-us-about-this-notice) " below.
+If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section [HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#14-how-can-you-contact-us-about-this-notice) below.
 
   
 
@@ -312,11 +291,11 @@ However, please note that this will not affect the lawfulness of the processing 
   
 
 ###### **Cookies and similar technologies:**
-Most Web browsers are set to accept cookies by default. If you prefer, you can usually choose to set your browser to remove cookies and to reject cookies. If you choose to remove cookies or reject cookies, this could affect certain features or services of our Services. You may also [opt out of interest-based advertising by advertisers](http://www.aboutads.info/choices/){:target="_blank"} on our Services. For further information, please see our Cookie Notice: [http://www.alesordo.com/cookies](http://www.alesordo.com/cookies).
+Most Web browsers are set to accept cookies by default. If you prefer, you can usually choose to set your browser to remove cookies and to reject cookies. If you choose to remove cookies or reject cookies, this could affect certain features or services of our Services. You may also [opt out of interest-based advertising by advertisers](http://www.aboutads.info/choices/){:target="_blank"} on our Services. For further information, please see our Cookie Notice: [http://www.alesordo.com/cookies](/cookies).
 
   
 
-If you have questions or comments about your privacy rights, you may email us at [privacy@alesordo.com](mailto:privacy.alesordo.com).
+If you have questions or comments about your privacy rights, you may email us at [privacy@alesordo.com](mailto:privacy@alesordo.com).
 
   
 
@@ -390,26 +369,23 @@ We have collected the following categories of personal information in the past t
 We will use and retain the collected personal information as needed to provide the Services or for:
 
 *   Category A - As long as the user explicitly requests to remove them
-
 *   Category B - As long as the user explicitly requests to remove them
 
 We may also collect other personal information outside of these categories through instances where you interact with us in person, online, or by phone or mail in the context of:
 
 *   Receiving help through our customer support channels;
-
 *   Participation in customer surveys or contests; and
-
 *   Facilitation in the delivery of our Services and to respond to your inquiries.
 
 **How do we use and share your personal information?**
 
   
 
-More information about our data collection and sharing practices can be found in this privacy notice and our Cookie Notice: [http://www.alesordo.com/cookies](http://www.alesordo.com/cookies) .
+More information about our data collection and sharing practices can be found in this privacy notice and our Cookie Notice: [http://www.alesordo.com/cookies](/cookies) .
 
   
 
-You may contact us by visiting [https://www.alesordo.com/contact/](https://www.alesordo.com/contact/), or by referring to the contact details at the bottom of this document.
+You may contact us by visiting [https://www.alesordo.com/contact/](/contact), or by referring to the contact details at the bottom of this document.
 
   
 
@@ -452,19 +428,12 @@ You can ask for the deletion of your personal information. If you ask us to dele
 Depending on the circumstances, you have a right to know:
 
 *   whether we collect and use your personal information;
-
 *   the categories of personal information that we collect;
-
 *   the purposes for which the collected personal information is used;
-
 *   whether we sell or share personal information to third parties;
-
 *   the categories of personal information that we sold, shared, or disclosed for a business purpose;
-
 *   the categories of third parties to whom the personal information was sold, shared, or disclosed for a business purpose;
-
 *   the business or commercial purpose for collecting, selling, or sharing personal information; and
-
 *   the specific pieces of personal information we collected about you.
 
 In accordance with applicable law, we are not obligated to provide or delete consumer information that is de-identified in response to a consumer request or to re-identify individual data to verify a consumer request.
@@ -502,14 +471,11 @@ We will only use personal information provided in your request to verify your id
 *Other privacy rights*
 
 *   You may object to the processing of your personal information.
-
 *   You may request correction of your personal data if it is incorrect or no longer relevant, or ask to restrict the processing of the information.
-
 *   You can designate an authorized agent to make a request under the CCPA on your behalf. We may deny a request from an authorized agent that does not submit proof that they have been validly authorized to act on your behalf in accordance with the CCPA.
-
 *   You may request to opt out from future selling or sharing of your personal information to third parties. Upon receiving an opt-out request, we will act upon the request as soon as feasibly possible, but no later than fifteen (15) days from the date of the request submission.
 
-To exercise these rights, you can contact us by visiting [https://www.alesordo.com/contact/](https://www.alesordo.com/contact/), or by referring to the contact details at the bottom of this document. If you have a complaint about how we handle your data, we would like to hear from you.
+To exercise these rights, you can contact us by visiting [https://www.alesordo.com/contact/](/contact), or by referring to the contact details at the bottom of this document. If you have a complaint about how we handle your data, we would like to hear from you.
 
   
 
@@ -548,23 +514,16 @@ If this definition "consumer" applies to you, we must adhere to certain rights a
 The information we collect, use, and disclose about you will vary depending on how you interact with Alessio Sordo and our Services. To find out more, please visit the following links:
 
 *   [Personal data we collect](#infocollect)
-
 *   [How we use your personal data](#2-how-do-we-process-your-information)
-
 *   [When and with whom we share your personal data](#4-when-and-with-whom-do-we-share-your-personal-information)
 
 *Your rights with respect to your personal data*
 
 *   Right to be informed whether or not we are processing your personal data
-
 *   Right to access your personal data
-
 *   Right to correct inaccuracies in your personal data
-
 *   Right to request deletion of your personal data
-
 *   Right to obtain a copy of the personal data you previously shared with us
-
 *   Right to opt out of the processing of your personal data if it is used for targeted advertising, the sale of personal data, or profiling in furtherance of decisions that produce legal or similarly significant effects ("profiling")
 
 Alessio Sordo has not sold any personal data to third parties for business or commercial purposes. Alessio Sordo will not sell personal data in the future belonging to website visitors, users, and other consumers.
@@ -575,11 +534,11 @@ Alessio Sordo has not sold any personal data to third parties for business or co
 
   
 
-More information about our data collection and sharing practices can be found in this privacy notice and our Cookie Notice: [http://www.alesordo.com/cookies](http://www.alesordo.com/cookies) .
+More information about our data collection and sharing practices can be found in this privacy notice and our Cookie Notice: [http://www.alesordo.com/cookies](/cookies) .
 
   
 
-You may contact us by email at [privacy@alesordo.com](mailto:privacy.alesordo.com), by visiting [https://www.alesordo.com/contact/](https://www.alesordo.com/contact/) , or by referring to the contact details at the bottom of this document.
+You may contact us by email at [privacy@alesordo.com](mailto:privacy@alesordo.com), by visiting [https://www.alesordo.com/contact/](/contact) , or by referring to the contact details at the bottom of this document.
 
   
 
@@ -603,7 +562,7 @@ Upon receiving your request, we will respond without undue delay, but in all cas
 
   
 
-If we decline to take action regarding your request, we will inform you of our decision and reasoning behind it. If you wish to appeal our decision, please email us at [privacy@alesordo.com](mailto:privacy.alesordo.com) . Within sixty (60) days of receipt of an appeal, we will inform you in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions. If your appeal if denied, you may contact the [Attorney General to submit a complaint](https://www.oag.state.va.us/consumer-protection/index.php/file-a-complaint){:target="_blank"}.
+If we decline to take action regarding your request, we will inform you of our decision and reasoning behind it. If you wish to appeal our decision, please email us at [privacy@alesordo.com](mailto:privacy@alesordo.com) . Within sixty (60) days of receipt of an appeal, we will inform you in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions. If your appeal if denied, you may contact the [Attorney General to submit a complaint](https://www.oag.state.va.us/consumer-protection/index.php/file-a-complaint){:target="_blank"}.
 
   
 
@@ -623,7 +582,7 @@ We may update this privacy notice from time to time. The updated version will be
 
   
 
-If you have questions or comments about this notice, you may email us at [privacy@alesordo.com](mailto:privacy.alesordo.com).
+If you have questions or comments about this notice, you may email us at [privacy@alesordo.com](mailto:privacy@alesordo.com).
 
   
 
@@ -631,6 +590,6 @@ If you have questions or comments about this notice, you may email us at [privac
 
   
 
-Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it. To request to review, update, or delete your personal information, please visit: [https://www.alesordo.com/contact/](https://www.alesordo.com/contact/) .
+Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it. To request to review, update, or delete your personal information, please visit: [https://www.alesordo.com/contact/](/contact) .
 
 This privacy policy was created using Termly's [Privacy Policy Generator](https://termly.io/products/privacy-policy-generator/){:target="_blank"}.

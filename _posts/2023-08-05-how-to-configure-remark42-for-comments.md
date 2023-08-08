@@ -49,9 +49,9 @@ In the end, I decided to sign up for a paid VPS and looked for the cheapest one.
 
 ## 3. Installing Remark42 on the server
 
-I followed the [official procedure](https://remark42.com/docs/getting-started/installation/) and started from the `docker-compose.yml` file you can find on the Remark42 repository.
+I followed the [official procedure](https://remark42.com/docs/getting-started/installation/){:target="_blank"} and started from the `docker-compose.yml` file you can find on the Remark42 repository.
 
-There, I added all the **parameters** needed for my use. At first, I enabled authenticating with Telegram, GitHub, Google and Anonymously following [these indications](https://remark42.com/docs/configuration/authorization/). Then, I also enabled email authentication following [these other indications](https://remark42.com/docs/configuration/email/) for Gmail. Moreover, I enabled [Slack admin notifications](https://remark42.com/docs/configuration/notifications/).
+There, I added all the **parameters** needed for my use. At first, I enabled authenticating with Telegram, GitHub, Google and Anonymously following [these indications](https://remark42.com/docs/configuration/authorization/){:target="_blank"}. Then, I also enabled email authentication following [these other indications](https://remark42.com/docs/configuration/email/){:target="_blank"} for Gmail. Moreover, I enabled [Slack admin notifications](https://remark42.com/docs/configuration/notifications/){:target="_blank"}.
 
 In the end, the file looked like this (I've hidden all the sensitive fields and changed the domain):
 ```yml
@@ -107,7 +107,7 @@ services:
       - ./var:/srv/var
 ```
 
-Setting the port to 8080:8080 is important to be exposed. An **important note** on the `ADMIN_SHARED_ID`. You need it to enable the admin management of comments. To get the ID, just go on the page [https://remark42.com/demo/](https://remark42.com/demo/), log-in with the service you want to use as admin (email, Telegram, GitHub, Google) and put the token. Then, press on your name on top of the comment box and on the top right of the window that opens you'll see the ID.
+Setting the port to 8080:8080 is important to be exposed. An **important note** on the `ADMIN_SHARED_ID`. You need it to enable the admin management of comments. To get the ID, just go on the page [https://remark42.com/demo/](https://remark42.com/demo/){:target="_blank"}, log-in with the service you want to use as admin (email, Telegram, GitHub, Google) and put the token. Then, press on your name on top of the comment box and on the top right of the window that opens you'll see the ID.
 
 After editing and saving the `docker-compose.yml`, I pushed it to a private Git repo, pulled it on my VPS and called `docker-compose pull && docker-compose up -d` via ssh.
 
