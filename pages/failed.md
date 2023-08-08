@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contact form error
-permalink: /failed/
+permalink: /failed
 ---
 
 {% include failed.html %}

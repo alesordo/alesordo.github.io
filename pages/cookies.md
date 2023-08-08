@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Cookies policy
-permalink: /cookies/
+permalink: /cookies
 ---
 
 ## Cookie Policy for Alessio Sordo

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CV
-permalink: /cv/
+permalink: /cv
 weight: 3
 ---
 

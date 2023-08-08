@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Thank you
-permalink: /thanks/
+permalink: /thanks
 ---
 
 {% include thanks.html %}
