@@ -20,8 +20,8 @@
                         }
                         else {
                             var url = 'https://script.google.com/macros/s/AKfycbz1lkC1JaV2rxX-pzOuqlr6M4PXBVCgP-EvGO15D5KP12B8n0ZEtGjnKHBAzbvx_FiF/exec';
-                            var redirectSuccessUrl = '/thanks/';
-                            var redirectFailedUrl = '/failed/';
+                            var redirectSuccessUrl = '/thanks';
+                            var redirectFailedUrl = '/failed';
                             var xhr = $.ajax({
                                 url: url,
                                 method: 'GET',

@@ -10,7 +10,7 @@ permalink: /privacy
 
 This privacy notice for Alessio Sordo ("**we**," "**us**," or "**our**"), describes how and why we might collect, store, use, and/or share ("**process**") your information when you use our services ("**Services**"), such as when you:
 
-*   Visit our website at [https://www.alesordo.com/](https://www.alesordo.com/) , or any website of ours that links to this privacy notice
+*   Visit our website at [https://www.alesordo.com](https://www.alesordo.com) , or any website of ours that links to this privacy notice
 *   Engage with us in other related ways, including any sales, marketing, or events
 
 **Questions or concerns?** Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at [privacy@alesordo.com](mailto:privacy@alesordo.com).
@@ -51,7 +51,7 @@ This privacy notice for Alessio Sordo ("**we**," "**us**," or "**our**"), descri
 
   
 
-**How do you exercise your rights?** The easiest way to exercise your rights is by visiting [https://www.alesordo.com/contact/](/contact) , or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws.
+**How do you exercise your rights?** The easiest way to exercise your rights is by visiting [https://www.alesordo.com/contact](/contact) , or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws.
 
   
 
@@ -385,7 +385,7 @@ More information about our data collection and sharing practices can be found in
 
   
 
-You may contact us by visiting [https://www.alesordo.com/contact/](/contact), or by referring to the contact details at the bottom of this document.
+You may contact us by visiting [https://www.alesordo.com/contact](/contact), or by referring to the contact details at the bottom of this document.
 
   
 
@@ -475,7 +475,7 @@ We will only use personal information provided in your request to verify your id
 *   You can designate an authorized agent to make a request under the CCPA on your behalf. We may deny a request from an authorized agent that does not submit proof that they have been validly authorized to act on your behalf in accordance with the CCPA.
 *   You may request to opt out from future selling or sharing of your personal information to third parties. Upon receiving an opt-out request, we will act upon the request as soon as feasibly possible, but no later than fifteen (15) days from the date of the request submission.
 
-To exercise these rights, you can contact us by visiting [https://www.alesordo.com/contact/](/contact), or by referring to the contact details at the bottom of this document. If you have a complaint about how we handle your data, we would like to hear from you.
+To exercise these rights, you can contact us by visiting [https://www.alesordo.com/contact](/contact), or by referring to the contact details at the bottom of this document. If you have a complaint about how we handle your data, we would like to hear from you.
 
   
 
@@ -538,7 +538,7 @@ More information about our data collection and sharing practices can be found in
 
   
 
-You may contact us by email at [privacy@alesordo.com](mailto:privacy@alesordo.com), by visiting [https://www.alesordo.com/contact/](/contact) , or by referring to the contact details at the bottom of this document.
+You may contact us by email at [privacy@alesordo.com](mailto:privacy@alesordo.com), by visiting [https://www.alesordo.com/contact](/contact) , or by referring to the contact details at the bottom of this document.
 
   
 
@@ -590,6 +590,6 @@ If you have questions or comments about this notice, you may email us at [privac
 
   
 
-Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it. To request to review, update, or delete your personal information, please visit: [https://www.alesordo.com/contact/](/contact) .
+Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it. To request to review, update, or delete your personal information, please visit: [https://www.alesordo.com/contact](/contact) .
 
 This privacy policy was created using Termly's [Privacy Policy Generator](https://termly.io/products/privacy-policy-generator/){:target="_blank"}.
