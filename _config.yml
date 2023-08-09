@@ -80,9 +80,7 @@ collections:
 
 ### Analytics ###
 analytics:
-  enabled: false                                        # Set true to enable analytics
-  google:
-    tracking_id: your-google-tracking-id
+  enabled: true                                        # Set true to enable analytics
 
 
 ### Buy me a coffee ###
