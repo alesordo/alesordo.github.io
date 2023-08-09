@@ -84,13 +84,12 @@ analytics:
 
 
 ### Buy me a coffee ###
-# See https://www.buymeacoffee.com/
-buymeacoffee:
+# See https://www.ko-fi.com/
+ko-fi:
   enabled: false
-  username: your_username
-  color: "#007bff"
-  message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
-  description: "Support me on Buy me a coffee!"
+  username: alesordo
+  color: '#dc3545'
+  text: An espresso?                                   # Text on the button
 
 
 ### Defaults for collections ###
