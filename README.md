@@ -16,7 +16,10 @@ It is based on the [portfolYOU](https://github.com/YoussefRaafatNasry/portfolYOU
 - Removed 'About me' page;
 - Added CV and Contact pages;
 - Added Privacy policy (thanks to [Termly](https://termly.io/products/privacy-policy-generator/));
-- Added Remark42 comments instead of Disqus.
+- Added Remark42 comments instead of Disqus;
+- Added Cookie Policy;
+- Added Matomo analytics instead of Google Analytics to comply with GDPR;
+- Added Ko-Fi instead of Buy Me a Coffee due to 0% fees.
 
 ## How to run this theme
 If you want to run a local demo of my website on your computer, first, clone the repository.
