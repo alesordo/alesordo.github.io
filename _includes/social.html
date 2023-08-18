@@ -12,7 +12,8 @@
        style="color: #{{ unfocused_color }}"
        onMouseOver="this.style.color='#{{ service_data.color }}'"
        onMouseOut="this.style.color='#{{ unfocused_color }}'"
-       alt="{{ service_data.icon | replace: "fab fa-", "" }}">
+       alt="{{ service_data.icon | replace: "fab fa-", "" }}"
+       aria-label="{{ service_name }}">
       <i class="{{ service_data.icon }} fa-1x"></i>
     </a>
     {%- endif -%}
