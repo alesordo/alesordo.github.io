@@ -4,7 +4,7 @@ tagline             : Alessio Sordo's personal website.
 description         : >-
                       A 24-year-old Computer Science Engineering student from Italy, passionate about IoT and Machine Learning and with a basic knowledge of Electronics.
 baseurl             : "/"                            # Comment if you are hosting your site at <your-username>.github.io directly
-url                 : https://alesordo.com
+url                 : https://www.alesordo.com
 repository          : alesordo/alesordo.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 # remote_theme        : YoussefRaafatNasry/portfolYOU
 open_new_tab        : true                             # Opens external URLs in new tab (works for posts, projects, navbar and footer only)
