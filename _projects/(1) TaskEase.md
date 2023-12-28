@@ -1,6 +1,6 @@
 ---
 name: TaskEase
-tools: [JavaScript, HTML, CSS, Docker]
+tools: [javascript, html, css, docker]
 image: ../assets/proj_imgs/taskease.webp
 description: >
     Full-stack web application for project management with Kanban boards. Developed using the MEAN stack.
