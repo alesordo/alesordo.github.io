@@ -5,6 +5,8 @@ image: ../assets/proj_imgs/wastewater/pcb.webp
 description: Master thesis project. I developed an IoT system to manage wastewaters in health-critical buildings. The system comprehends machine learning models for more intelligent flushing operations.
 ---
 
+# IoT wastewater management system
+
 My master's thesis focused on an **IoT system** for wastewater management in public buildings, in order to reduce bacterial concentrations and associated risks. In addition to automating the flushing process, I've also integrated **machine learning models** to enable smarter water consumption and increased bacterial reduction. The project was a proof of concept requested by an external client and will also be the subject of a paper.
 
 ## Main tasks:
