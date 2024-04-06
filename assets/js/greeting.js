@@ -17,7 +17,14 @@ function showGreeting() {
     document.getElementById("greeting").innerHTML = greeting;
 }
 
+function automaticAge() {
+    var date = new Date();
+    var year = date.getFullYear();
+    var age = year - 1999;
+
+    document.querySelector("#age").innerHTML = age;
+}
+
 // Call the showGreeting function once the DOM content is loaded
-document.addEventListener("DOMContentLoaded", function() {
-    showGreeting();
-    });
+showGreeting();
+automaticAge();
