@@ -12,7 +12,7 @@ source              : .
 layouts_dir         : _layouts
 includes_dir        : _includes
 sass:
-  sass_dir: ./_sass
+  sass_dir: _sass
 logo                : assets/big-logo.png
 
 
@@ -113,6 +113,13 @@ defaults:
 ### Exclude from processing ###
 exclude:
   - README.md
+  - AGENTS.md
+  - instruction.md
+  - skills.md
   - CONTRIBUTING.md
   - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - package-lock.json
+  - scripts
   - "*.log"

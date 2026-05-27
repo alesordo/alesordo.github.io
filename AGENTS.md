@@ -9,6 +9,9 @@
 ## Local Commands
 - Build: `bundle exec jekyll build`
 - Serve: `bundle exec jekyll serve`
+- On the local Ruby 4 Windows setup, prefer:
+  `ruby scripts/jekyll_local.rb build`
+  `ruby scripts/jekyll_local.rb serve`
 - If Git refuses to run because of ownership, use:
   `git config --global --add safe.directory C:/Users/aleso/alesordo.github.io`
 
