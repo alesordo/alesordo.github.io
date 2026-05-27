@@ -1,22 +1,28 @@
-- title: Computer Engineering Intern - Nimbus Research Centre, Ireland
-  from: 04/2023
+- title: Associate Engineer - Deutsche Bank, Berlin
+  from: 09/2025
   to: present
   description: >
-                Project description:<br>
-                Development of an IoT system for monitoring and actuating sanitary waters in critical public
-                buildings, to avoid the formation of harmful bacteria.
-                <h6>Main tasks:</h6>
-                <ul>
-                  <li> Validation of the IoT device structure, based on the ESP32-S3 development board;</li>
-                  <li> Firmware development for the device, using the C framework ESP-IDF;</li>
-                  <li> Setup of the IoT platform, on the cloud hosted commercial solution TagoIO;</li>
-                  <li> Research on possible Machine Learning approaches to correlate temperature and bacteria, for
-                  a more efficient and sustainable flushing pattern.</li>
-                </ul>
-                
+                Software engineer in Merchant Solutions, working on core backend functionality for payment systems.
+                Focus areas include Java services, GCP migration work, reliability, and production-oriented delivery.
 
-- title: Private tutor - GoStudent, Online
-  from: 05/2022
-  to: present
-  description: Online tutor of math, english and informatics, with more than 100 lessons completed
-               and 10 regular students. Helped also the commercial team with trial lessons for new clients.
+- title: Graduate Engineer - Deutsche Bank, Berlin
+  from: 05/2024
+  to: 08/2025
+  description: >
+                Rotated across Merchant Solutions and RegGPT. Contributed to payment-system features, defect fixes,
+                unit and integration testing, CI/CD deployments, RAG improvements, vector database integrations,
+                multimodal ingestion, and LLM evaluation research.
+
+- title: Student Trainee - Siemens Digital Academy, Milan
+  from: 03/2024
+  to: 05/2024
+  description: >
+                Selected for the Siemens Digital Academy and contributed to a hands-on IoT dashboard project using
+                Node-RED and Siemens technologies.
+
+- title: Master Thesis Student - Nimbus Research Centre, Cork
+  from: 04/2023
+  to: 08/2023
+  description: >
+                Developed an IoT proof of concept for wastewater management, including embedded device validation,
+                firmware development, cloud monitoring, and machine learning experiments for adaptive flushing logic.
