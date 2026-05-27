@@ -7,5 +7,7 @@ external_url: https://github.com/alesordo/Secure-RTSP-Video-Streaming
 project_type: remote
 website: github
 website_title: GitHub repository
+category: Research / Academic
+featured: false
 sitemap: false
 ---
