@@ -1,52 +1,119 @@
-// for validating the forms
 (function () {
     'use strict';
-    window.addEventListener(
-        'load', function () {
-            var formObject = $('#contact-form');
-            var form = formObject[0];
-            if (form != undefined) {
-                form.addEventListener(
-                    'submit',
-                    function (event) {
-                        var submitBtn = $('button[name="submit"]')[0];
-                        submitBtn.disabled = true;
-                        submitBtn.innerHTML = 'Sending...';
-                        if (form.checkValidity() === false || form.address.value.length) {
-                            submitBtn.disabled = false;
-                            submitBtn.innerHTML = 'Send';
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        else {
-                            var url = 'https://script.google.com/macros/s/AKfycbz1lkC1JaV2rxX-pzOuqlr6M4PXBVCgP-EvGO15D5KP12B8n0ZEtGjnKHBAzbvx_FiF/exec';
-                            var redirectSuccessUrl = '/thanks';
-                            var redirectFailedUrl = '/failed';
-                            var xhr = $.ajax({
-                                url: url,
-                                method: 'GET',
-                                dataType: 'json',
-                                data: formObject.serialize(),
-                                success: function (data) {
-                                    submitBtn.disabled = false;
-                                    submitBtn.innerHTML = 'Send';
-                                    $(location).attr('href', redirectSuccessUrl);
-                                },
-                                error: function (data) {
-                                    submitBtn.disabled = false;
-                                    submitBtn.innerHTML = 'Send';
-                                    $(location).attr('href', redirectFailedUrl);
-                                },
-                            });
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    },
-                    false
-                );
+
+    window.addEventListener('load', function () {
+        var form = document.getElementById('contact-form');
+
+        if (!form) {
+            return;
+        }
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (!form.checkValidity() || hasHoneypotValue(form)) {
+                form.classList.add('was-validated');
+                return;
             }
-        },
-        false
-    );
+
+            submitForm(form);
+        }, false);
+    }, false);
+
+    function hasHoneypotValue(form) {
+        return form.address && form.address.value.length > 0;
+    }
+
+    function submitForm(form) {
+        var submitBtn = form.querySelector('button[name="submit"]');
+        var endpoint = form.dataset.endpoint;
+        var method = (form.dataset.method || 'GET').toUpperCase();
+        var successUrl = form.dataset.successUrl || '/thanks';
+        var failureUrl = form.dataset.failureUrl || '/failed';
+        var originalText = submitBtn ? submitBtn.textContent : '';
+
+        if (!endpoint) {
+            redirect(failureUrl);
+            return;
+        }
+
+        setButtonState(submitBtn, true, 'Sending...');
+
+        var request = buildRequest(form, endpoint, method);
+        var timeout = createTimeout(15000);
+
+        fetch(request.url, {
+            method: request.method,
+            body: request.body,
+            mode: 'no-cors',
+            credentials: 'omit',
+            signal: timeout.signal
+        })
+            .then(function () {
+                redirect(successUrl);
+            })
+            .catch(function () {
+                setButtonState(submitBtn, false, originalText || 'Send');
+                redirect(failureUrl);
+            })
+            .finally(function () {
+                timeout.clear();
+            });
+    }
+
+    function buildRequest(form, endpoint, method) {
+        var formData = new FormData(form);
+
+        if (method === 'GET') {
+            var params = new URLSearchParams(formData);
+            var separator = endpoint.indexOf('?') === -1 ? '?' : '&';
+
+            return {
+                method: 'GET',
+                url: endpoint + separator + params.toString(),
+                body: undefined
+            };
+        }
+
+        return {
+            method: method,
+            url: endpoint,
+            body: formData
+        };
+    }
+
+    function createTimeout(milliseconds) {
+        if (!window.AbortController) {
+            return {
+                signal: undefined,
+                clear: function () {}
+            };
+        }
+
+        var controller = new AbortController();
+        var timeoutId = window.setTimeout(function () {
+            controller.abort();
+        }, milliseconds);
+
+        return {
+            signal: controller.signal,
+            clear: function () {
+                window.clearTimeout(timeoutId);
+            }
+        };
+    }
+
+    function setButtonState(button, disabled, text) {
+        if (!button) {
+            return;
+        }
+
+        button.disabled = disabled;
+        button.textContent = text;
+    }
+
+    function redirect(url) {
+        window.location.href = url;
+    }
 })();
