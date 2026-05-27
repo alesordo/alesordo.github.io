@@ -3,6 +3,8 @@ title: Almost graduated. And now?
 tags: [thoughts]
 style: light
 color: primary
+content_type: Personal archive
+status: Student-era reflection
 description: My thesis is finally completed, the graduation is so close. But then, what will happen?
 ---
 
