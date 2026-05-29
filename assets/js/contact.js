@@ -1,6 +1,78 @@
 (function () {
     'use strict';
 
+    var turnstileWidgetId = null;
+    var renderedTheme = null;
+    var isWatchingTheme = false;
+
+    function onTurnstileLoad() {
+        renderTurnstile();
+        watchThemeChanges();
+    };
+
+    function renderTurnstile() {
+        var turnstileWidget = document.getElementById('turnstile-widget');
+        var theme = getTurnstileTheme();
+
+        if (!turnstileWidget || !window.turnstile) {
+            return;
+        }
+
+        if (turnstileWidgetId !== null && renderedTheme === theme) {
+            return;
+        }
+
+        if (turnstileWidgetId !== null) {
+            turnstile.remove(turnstileWidgetId);
+            turnstileWidgetId = null;
+        }
+
+        turnstileWidgetId = turnstile.render(turnstileWidget, {
+            // TODO: remove from here
+            sitekey: "1x00000000000000000000AA",
+            theme: theme,
+            callback: function (token) {
+                console.log("Turnstile token:", token);
+                // Handle successful verification
+            },
+            "error-callback": function (errorCode) {
+                console.error("Turnstile error:", errorCode);
+            },
+        });
+
+        renderedTheme = theme;
+    }
+
+    function getTurnstileTheme() {
+        return typeof getTheme === "function" && getTheme() === "light" ? "light" : "dark";
+    }
+
+    function watchThemeChanges() {
+        if (isWatchingTheme || !window.MutationObserver) {
+            return;
+        }
+
+        isWatchingTheme = true;
+
+        var observer = new MutationObserver(function (mutations) {
+            var themeChanged = mutations.some(function (mutation) {
+                return mutation.attributeName === "data-theme";
+            });
+
+            if (themeChanged) {
+                renderTurnstile();
+            }
+        });
+
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ["data-theme"]
+        });
+    }
+
+    window.onTurnstileLoad = onTurnstileLoad;
+    window.addEventListener('load', onTurnstileLoad, false);
+
     window.addEventListener('load', function () {
         var form = document.getElementById('contact-form');
 
@@ -87,7 +159,7 @@
         if (!window.AbortController) {
             return {
                 signal: undefined,
-                clear: function () {}
+                clear: function () { }
             };
         }
 

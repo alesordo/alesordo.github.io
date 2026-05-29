@@ -1,18 +1,13 @@
-<!-- <script src="{{ '/assets/js/jquery.min.js' | relative_url}}"></script> -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad"
+    defer></script>
 <script src="{{ '/assets/js/contact.js' | relative_url }}"></script>
 
 <section>
     <h4 class="font-weight-bold text-center">Contact form</h4>
     <p class="text-muted text-center">I'll reply as soon as possible</p>
-    <form
-        id="contact-form"
-        class="needs-validation col-md-8 col-sm-10 container-fluid"
-        role="form"
+    <form id="contact-form" class="needs-validation col-md-8 col-sm-10 container-fluid" role="form"
         data-endpoint="https://script.google.com/macros/s/AKfycbz1lkC1JaV2rxX-pzOuqlr6M4PXBVCgP-EvGO15D5KP12B8n0ZEtGjnKHBAzbvx_FiF/exec"
-        data-method="GET"
-        data-success-url="/thanks"
-        data-failure-url="/failed"
-        novalidate>
+        data-method="GET" data-success-url="/thanks" data-failure-url="/failed" novalidate>
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="form-group">
@@ -24,7 +19,8 @@
                     <input type="email" name="email" class="form-control" placeholder="Email" required>
                 </div>
             </div>
-            <div class="address"><input name="address" type="text" autocomplete="new-address" tabindex="-1" value=""/></div>
+            <div class="address"><input name="address" type="text" autocomplete="new-address" tabindex="-1" value="" />
+            </div>
             <div class="col-md-12">
                 <div class="form-group">
                     <input name="subject" class="form-control" placeholder="Subject" required>
@@ -32,9 +28,11 @@
             </div>
             <div class="col-12">
                 <div class="form-group">
-                    <textarea class="form-control rounded" rows="8" name="message" placeholder="Message..." required></textarea>
+                    <textarea class="form-control rounded" rows="8" name="message" placeholder="Message..."
+                        required></textarea>
                 </div>
             </div>
+            <div class="col-12" id="turnstile-widget"></div>
             <div class="col-12 mt-3">
                 <button class="btn btn-danger" type="submit" name="submit">Send</button>
             </div>
