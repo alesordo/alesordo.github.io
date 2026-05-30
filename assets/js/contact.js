@@ -3,24 +3,34 @@
 
     var turnstileWidgetId = null;
     var renderedTheme = null;
+    var isTurnstileVerified = false;
     var isWatchingTheme = false;
 
     function onTurnstileLoad() {
+        var form = document.getElementById('contact-form');
+
+        if (!form) {
+            return;
+        }
+
         renderTurnstile();
         watchThemeChanges();
     };
 
     function renderTurnstile() {
+        var form = document.getElementById('contact-form');
         var turnstileWidget = document.getElementById('turnstile-widget');
         var theme = getTurnstileTheme();
 
-        if (!turnstileWidget || !window.turnstile) {
+        if (!form || !turnstileWidget || !window.turnstile) {
             return;
         }
 
         if (turnstileWidgetId !== null && renderedTheme === theme) {
             return;
         }
+
+        setTurnstileVerified(form, false);
 
         if (turnstileWidgetId !== null) {
             turnstile.remove(turnstileWidgetId);
@@ -32,12 +42,18 @@
             sitekey: "0x4AAAAAADYnZCIn7SNVeF2g",
             theme: theme,
             callback: function (token) {
-                console.log("Turnstile token:", token);
-                // Handle successful verification
+                setTurnstileVerified(form, Boolean(token));
             },
             "error-callback": function (errorCode) {
                 console.error("Turnstile error:", errorCode);
+                setTurnstileVerified(form, false);
             },
+            "expired-callback": function () {
+                setTurnstileVerified(form, false);
+            },
+            "timeout-callback": function () {
+                setTurnstileVerified(form, false);
+            }
         });
 
         renderedTheme = theme;
@@ -71,7 +87,7 @@
     }
 
     window.onTurnstileLoad = onTurnstileLoad;
-    window.addEventListener('load', onTurnstileLoad, false);
+    window.addEventListener('render', onTurnstileLoad, false);
 
     window.addEventListener('load', function () {
         var form = document.getElementById('contact-form');
@@ -80,11 +96,15 @@
             return;
         }
 
+        if (!isTurnstileVerified) {
+            setTurnstileVerified(form, false);
+        }
+
         form.addEventListener('submit', function (event) {
             event.preventDefault();
             event.stopPropagation();
 
-            if (!form.checkValidity() || hasHoneypotValue(form)) {
+            if (!form.checkValidity() || hasHoneypotValue(form) || !isTurnstileVerified) {
                 form.classList.add('was-validated');
                 return;
             }
@@ -186,7 +206,16 @@
         }
 
         button.disabled = disabled;
-        button.textContent = text;
+        if (text) {
+            button.textContent = text;
+        }
+    }
+
+    function setTurnstileVerified(form, verified) {
+        var submitBtn = form.querySelector('button[name="submit"]');
+
+        isTurnstileVerified = verified;
+        setButtonState(submitBtn, !verified, null);
     }
 
     function redirect(url) {
