@@ -29,7 +29,7 @@
 
         turnstileWidgetId = turnstile.render(turnstileWidget, {
             // TODO: remove from here
-            sitekey: "1x00000000000000000000AA",
+            sitekey: "0x4AAAAAADYnZCIn7SNVeF2g",
             theme: theme,
             callback: function (token) {
                 console.log("Turnstile token:", token);
