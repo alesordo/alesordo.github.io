@@ -5,9 +5,10 @@
 <section>
     <h4 class="font-weight-bold text-center">Contact form</h4>
     <p class="text-muted text-center">I'll reply as soon as possible</p>
+    <!-- TODO: change -->
     <form id="contact-form" class="needs-validation col-md-8 col-sm-10 container-fluid" role="form"
-        data-endpoint="https://script.google.com/macros/s/AKfycbz1lkC1JaV2rxX-pzOuqlr6M4PXBVCgP-EvGO15D5KP12B8n0ZEtGjnKHBAzbvx_FiF/exec"
-        data-method="GET" data-success-url="/thanks" data-failure-url="/failed" novalidate>
+        data-endpoint="http://localhost:8080/api/v1/contact/messages"
+        data-method="POST" data-success-url="/thanks" data-failure-url="/failed" novalidate>
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="form-group">

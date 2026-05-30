@@ -118,14 +118,18 @@
         fetch(request.url, {
             method: request.method,
             body: request.body,
-            mode: 'no-cors',
             credentials: 'omit',
             signal: timeout.signal
         })
-            .then(function () {
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error('Contact form request failed with status ' + response.status);
+                }
+
                 redirect(successUrl);
             })
-            .catch(function () {
+            .catch(function (error) {
+                console.error(error);
                 setButtonState(submitBtn, false, originalText || 'Send');
                 redirect(failureUrl);
             })
