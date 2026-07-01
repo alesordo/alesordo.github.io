@@ -1,14 +1,15 @@
+<script src="{{ '/assets/js/contact.js' | relative_url }}" defer></script>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad"
     defer></script>
-<script src="{{ '/assets/js/contact.js' | relative_url }}"></script>
 
 <section>
     <h4 class="font-weight-bold text-center">Contact form</h4>
     <p class="text-muted text-center">I'll reply as soon as possible</p>
-    <!-- TODO: change -->
     <form id="contact-form" class="needs-validation col-md-8 col-sm-10 container-fluid" role="form"
-        data-endpoint="http://localhost:8080/api/v1/contact/messages"
-        data-method="POST" data-success-url="/thanks" data-failure-url="/failed" novalidate>
+        data-endpoint="{{ site.contact_form.endpoint | default: '' | escape }}"
+        data-method="{{ site.contact_form.method | default: 'POST' | escape }}"
+        data-success-url="/thanks" data-failure-url="/failed"
+        data-turnstile-sitekey="{{ site.turnstile.sitekey | default: '' | escape }}" novalidate>
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="form-group">

@@ -33,7 +33,7 @@
   </div>
 {%- endif -%}
 
-{%- assign project_sections = "Research / Academic|Thesis|Archive / Older Projects" | split: "|" -%}
+{%- assign project_sections = "Thesis|Research / Academic|Archive / Older Projects" | split: "|" -%}
 {%- for section in project_sections -%}
   {%- assign section_projects = site.projects | where: "category", section -%}
   {%- if section_projects.size > 0 -%}

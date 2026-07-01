@@ -21,8 +21,9 @@
         var form = document.getElementById('contact-form');
         var turnstileWidget = document.getElementById('turnstile-widget');
         var theme = getTurnstileTheme();
+        var sitekey = form ? form.dataset.turnstileSitekey : '';
 
-        if (!form || !turnstileWidget || !window.turnstile) {
+        if (!form || !turnstileWidget || !window.turnstile || !sitekey) {
             return;
         }
 
@@ -38,8 +39,7 @@
         }
 
         turnstileWidgetId = turnstile.render(turnstileWidget, {
-            // TODO: remove from here
-            sitekey: "0x4AAAAAADYnZCIn7SNVeF2g",
+            sitekey: sitekey,
             theme: theme,
             callback: function (token) {
                 setTurnstileVerified(form, Boolean(token));
@@ -98,6 +98,10 @@
 
         if (!isTurnstileVerified) {
             setTurnstileVerified(form, false);
+        }
+
+        if (window.turnstile) {
+            onTurnstileLoad();
         }
 
         form.addEventListener('submit', function (event) {

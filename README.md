@@ -37,6 +37,32 @@ Afterwards, you should see something like `Server running... press ctrl-c to sto
 
 If so, go on your browser, type `localhost:4000` and see the magic happen 🧙!
 
+## Environment configuration
+Runtime and deployment-specific values are declared in `config/env.yml` and read from either your shell environment or a local `.env` file. The `scripts/write_env_config.rb` script turns those values into `.jekyll-env.yml`, a local Jekyll config overlay. Cloned repositories can build without private values, but the contact form will not submit and Cloudflare Turnstile will not render until the related values are configured.
+
+| Variable | Required for | Notes |
+| --- | --- | --- |
+| `SITE_URL` | Production deploys | Full canonical URL, for example `https://www.alesordo.com`. |
+| `SITE_BASEURL` | Production deploys | Base path, usually `/` for a user/organization site or custom domain. |
+| `CONTACT_FORM_ENDPOINT` | Contact form | Full backend endpoint URL for contact submissions. Store it as a GitHub secret. |
+| `CONTACT_FORM_METHOD` | Contact form | Optional. Defaults to `POST`. |
+| `CLOUDFLARE_TURNSTILE_SITE_KEY` | Contact form | Store it as a GitHub secret. It is still visible in the rendered static site. |
+
+On Windows PowerShell, a local run with sample values looks like this:
+
+```powershell
+$env:SITE_URL = "http://localhost:4000"
+$env:SITE_BASEURL = "/"
+$env:CONTACT_FORM_ENDPOINT = "https://example.com/api/v1/contact/messages"
+$env:CLOUDFLARE_TURNSTILE_SITE_KEY = "example-site-key"
+ruby scripts/write_env_config.rb
+ruby scripts/jekyll_local.rb serve --config _config.yml,.jekyll-env.yml
+```
+
+You can also copy `.env.example` to `.env` for local development. When `.env` is present, its values are used for the local overlay; CI builds use GitHub Actions secrets and variables because they do not have a local `.env` file.
+
+Values used by browser code are hidden from the repository source, not from visitors. Once Jekyll renders the static HTML and JavaScript, frontend endpoints and Turnstile site keys can be inspected in the deployed page.
+
 ## How to customize this theme
 Okay, maybe your name is not Alessio Sordo, so you may ask how to put your name and all your personal stuff in this website.
 
@@ -50,6 +76,10 @@ For a more detailed guide, always refer to the portfolYOU official [documentatio
 
 ## How to deploy this website online
 There are [many ways](https://jekyllrb.com/docs/deployment/third-party/#:~:text=Sites%20on%20GitHub%20Pages%20are,Jekyll%2Dpowered%20website%20for%20free.) to deploy Jekyll websites remotely. What I used are GitHub pages. If you want to take a look at how they work, refer to the [original guide by GitHub](https://docs.github.com/en/pages/quickstart).
+
+This repository includes a GitHub Actions workflow for GitHub Pages. In the repository settings, set **Pages > Build and deployment > Source** to **GitHub Actions**. Then configure repository variables for public build values such as `SITE_URL` and `SITE_BASEURL`, and repository secrets for `CONTACT_FORM_ENDPOINT` and `CLOUDFLARE_TURNSTILE_SITE_KEY`.
+
+The environment-variable setup is meant for the included GitHub Actions workflow or any Jekyll build that first runs `scripts/write_env_config.rb` and passes `.jekyll-env.yml` through `--config`. GitHub Pages' native branch-based build does not expose repository secrets to Jekyll or run custom pre-build scripts. If you add a new configurable value, declare it in `config/env.yml`, add it to `.env.example`, and expose it in the workflow `env:` block if GitHub Actions needs it.
 
 ## Credits
 1. [portfolYOU](https://github.com/YoussefRaafatNasry/portfolYOU) *a theme by YoussefRaafatNasry*

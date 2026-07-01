@@ -29,6 +29,7 @@ module AbsoluteWindowsGlobCompat
 
     return [pattern] if File.exist?(pattern)
     return brace_matches(pattern) if pattern.include?("{_,}")
+    return recursive_ruby_matches(pattern) if pattern.include?("**") && pattern.end_with?("*.rb")
 
     directory = File.dirname(pattern)
     return [] unless File.directory?(directory)
@@ -39,6 +40,23 @@ module AbsoluteWindowsGlobCompat
     paths = entries.map { |entry| File.join(directory, entry) }.sort
 
     paths
+  end
+
+  def recursive_ruby_matches(pattern)
+    root = pattern.split("**", 2).first
+    root = File.dirname(root) if root.end_with?("/", "\\")
+    return [] unless File.directory?(root)
+
+    Dir.children(root).flat_map do |entry|
+      path = File.join(root, entry)
+      if File.directory?(path)
+        Dir.glob(File.join(path, "**", "*.rb"))
+      elsif File.extname(path) == ".rb"
+        path
+      else
+        []
+      end
+    end.sort
   end
 
   def brace_matches(pattern)
@@ -59,6 +77,25 @@ class Object
   def untaint
     self
   end unless method_defined?(:untaint)
+end
+
+def local_env_overlay_available?
+  root = File.expand_path("..", __dir__)
+  env_file = File.join(root, ".env")
+  overlay_file = File.join(root, ".jekyll-env.yml")
+  writer = File.join(__dir__, "write_env_config.rb")
+
+  system(RbConfig.ruby, writer) if File.file?(writer) && File.file?(env_file)
+
+  File.file?(overlay_file)
+end
+
+def config_option_present?
+  ARGV.include?("--config") || ARGV.any? { |arg| arg.start_with?("--config=") }
+end
+
+if local_env_overlay_available? && !config_option_present?
+  ARGV << "--config" << "_config.yml,.jekyll-env.yml"
 end
 
 require "bundler/setup"
