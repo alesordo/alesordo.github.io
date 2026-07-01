@@ -3,6 +3,8 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+.jekyll-env.yml
+.env
 
 # Ruby Gems
 .bundle

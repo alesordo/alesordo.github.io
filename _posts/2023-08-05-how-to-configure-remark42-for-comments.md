@@ -3,6 +3,8 @@ title: Setup Remark42 on Jekyll GitHub pages
 tags: [Remark42, Jekyll, Docker, nginx]
 style: light
 color: secondary
+content_type: Technical note
+status: Evergreen
 description: Comments are needed in a personal blog, but services like Disqus can be too intrusive. Here I tracked all the steps it took to install the privacy-friendly Remark42 commenting system.
 ---
 

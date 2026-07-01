@@ -8,5 +8,7 @@ external_url: https://github.com/alesordo/hackupc-2023
 project_type: remote
 website: github
 website_title: GitHub repository
+category: Archive / Older Projects
+featured: false
 sitemap: false
 ---

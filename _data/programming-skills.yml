@@ -1,15 +1,15 @@
-- name: C
+- name: Java
   percentage: 80
-  color: secondary
+  color: danger
 
 - name: Python
-  percentage: 70
-  color: yellow
+  percentage: 75
+  color: info
 
-- name: JavaScript
+- name: TypeScript / JavaScript
   percentage: 65
   color: warning
 
-- name: Java
+- name: C
   percentage: 60
-  color: info
+  color: secondary

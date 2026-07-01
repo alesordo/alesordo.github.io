@@ -1,4 +1,4 @@
-{%- if page.comments != false-%}
+{%- if page.comments != false and site.remark42.host and site.remark42.host != "" and site.remark42.site_id and site.remark42.site_id != "" -%}
   <script>
     theme = getTheme();
     document.getElementById("theme-toggler").addEventListener("click", (function() {
@@ -6,8 +6,8 @@
       window.REMARK42.changeTheme(new_theme);
     }));
     var remark_config = {
-        host: 'https://remark42.alesordo.com',
-        site_id: 'remark42.alesordo',
+        host: {{ site.remark42.host | jsonify }},
+        site_id: {{ site.remark42.site_id | jsonify }},
         theme: theme,
     };
     ! function(e, n) {

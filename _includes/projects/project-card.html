@@ -1,12 +1,17 @@
 <div>
-  <a href="{{ project_url }}" class="project card text-themed" {%- if external and site.open_new_tab -%} target="_blank" {%- endif -%}>
+  <a href="{{ project_url }}" class="project card text-themed"{% if external and site.open_new_tab %} target="_blank"{% endif %}>
     {%- if project_img -%}
     <img id="{{ project_id }}-img" class="card-img-top" src="{{ project_img }}" alt="{{ project_name }}" />
     {%- endif -%}
     <div class="card-body">
       <h5 id="{{ project_id }}-name" class="card-title">
           {%- if project_type == "remote" -%}
-          <i class="fab fa-{{ project_website }}" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="{{ project_website_title }}"></i> |&nbsp;
+          {%- if project_website == "file-lines" -%}
+            {%- assign project_website_icon = "fas fa-file-lines" -%}
+          {%- else -%}
+            {%- assign project_website_icon = project_website | prepend: "fab fa-" -%}
+          {%- endif -%}
+          <i class="{{ project_website_icon }}" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="{{ project_website_title }}"></i> |&nbsp;
           {%- endif -%}
         {{ project_name }}
       </h5>

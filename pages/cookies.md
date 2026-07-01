@@ -6,6 +6,8 @@ description: Website cookie policy.
 sitemap: false
 ---
 
+{%- assign privacy_contact_email = site.privacy.contact_email -%}
+
 ## Cookie Policy for Alessio Sordo
 
 **Last updated August 08, 2023**
@@ -51,4 +53,4 @@ For more general information on cookies, please read [the Cookies Policy article
 
 However if you are still looking for more information then you can contact us through one of our preferred contact methods:
 
-*   Email: [privacy@alesordo.com](mailto:privacy@alesordo.com)
+*   Email: [{{ privacy_contact_email }}](mailto:{{ privacy_contact_email }})

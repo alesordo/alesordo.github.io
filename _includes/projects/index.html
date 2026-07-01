@@ -1,66 +1,67 @@
-
 <h4 class="font-weight-bold text-center mt-4">Projects</h4>
-<div class="card-columns m-3">
-  <!-- Remote Projects with auto-generated card -->
-  {% for remote_project in page.remote_projects %}
+<p class="text-muted text-center mx-auto" style="max-width: 760px;">
+  Selected public work grouped by relevance. Professional employer work is represented through my experience and CV rather than confidential implementation details.
+</p>
 
-    {%- for repo in site.github.public_repositories -%}
+{%- assign featured_projects = site.projects | where: "featured", true -%}
+{%- if featured_projects.size > 0 -%}
+  <h5 class="font-weight-bold mt-4 ml-3">Featured</h5>
+  <div class="card-columns m-3">
+    {%- for project in featured_projects -%}
+      {%- assign project_type  = project.project_type | default: "local" -%}
+      {%- assign project_id    = project.name | slugify -%}
+      {%- assign project_img   = project.image -%}
+      {%- assign project_name  = project.name -%}
+      {%- assign project_desc  = project.description -%}
+      {%- assign project_tools = project.tools -%}
 
-      {%- if remote_project == repo.name -%}
-
-        {%- assign project = repo -%}
-        {%- assign words = project.name | split: '-' -%}
-        
-        {%- capture titlecase -%}
-          {%- for word in words -%}
-            {{ word | append: ' ' }}
-          {%- endfor -%}
-        {%- endcapture -%}
-
-        {%- assign project_website = "github" -%}
-        {%- assign project_website_title = "GitHub repository" -%}
-        {%- assign project_type  = "remote" -%}
-        {%- assign project_id    = project.name -%}
-        {%- assign project_img   = false -%}
-        {%- assign project_name  = titlecase | strip -%}
-        {%- assign project_desc  = project.description -%}
-        {%- assign project_url   = project.html_url -%}
-        {%- assign project_tools = project.topics -%}
-        {%- assign external      = true -%}
-
-        {% include projects/project-card.html %}
-
+      {%- if project_type == "remote" -%}
+        {%- assign project_website = project.website | default: "github" -%}
+        {%- assign project_website_title = project.website_title | default: "External link" -%}
       {%- endif -%}
 
+      {%- if project.external_url -%}
+        {%- assign project_url = project.external_url -%}
+        {%- assign external    = true -%}
+      {%- else -%}
+        {%- assign project_url = project.url | relative_url -%}
+        {%- assign external    = false -%}
+      {%- endif -%}
+
+      {% include projects/project-card.html %}
     {%- endfor -%}
+  </div>
+{%- endif -%}
 
-  {% endfor %}
+{%- assign project_sections = "Thesis|Research / Academic|Archive / Older Projects" | split: "|" -%}
+{%- for section in project_sections -%}
+  {%- assign section_projects = site.projects | where: "category", section -%}
+  {%- if section_projects.size > 0 -%}
+    <h5 class="font-weight-bold mt-4 ml-3">{{ section }}</h5>
+    <div class="card-columns m-3">
+      {%- for project in section_projects -%}
+        {%- assign project_type  = project.project_type | default: "local" -%}
+        {%- assign project_id    = project.name | slugify -%}
+        {%- assign project_img   = project.image -%}
+        {%- assign project_name  = project.name -%}
+        {%- assign project_desc  = project.description -%}
+        {%- assign project_tools = project.tools -%}
 
-  <!-- Local/Remote Projects with custom card -->
-  {% for project in site.projects %}
+        {%- if project_type == "remote" -%}
+          {%- assign project_website = project.website | default: "github" -%}
+          {%- assign project_website_title = project.website_title | default: "External link" -%}
+        {%- endif -%}
 
-    {%- assign project_type  = project.project_type | "local" -%}
-    {%- assign project_id    = project.name | slugify -%}
-    {%- assign project_img   = project.image -%}
-    {%- assign project_name  = project.name -%}
-    {%- assign project_desc  = project.description -%}
-    {%- assign project_tools = project.tools -%}
+        {%- if project.external_url -%}
+          {%- assign project_url = project.external_url -%}
+          {%- assign external    = true -%}
+        {%- else -%}
+          {%- assign project_url = project.url | relative_url -%}
+          {%- assign external    = false -%}
+        {%- endif -%}
 
-    {%- if project_type == "remote" -%}
-      {%- assign project_website = project.website | "github" -%}
-      {%- assign project_website_title = project.website_title | "GitHub repository" -%}
-    {%- endif -%}
-
-    {%- if project.external_url -%}
-      {%- assign project_url = project.external_url -%}
-      {%- assign external    = true -%}
-    {%- else -%}
-      {%- assign project_url = project.url | relative_url -%}
-      {%- assign external    = false -%}
-    {%- endif -%}
-
-    {% include projects/project-card.html %}
-
-  {% endfor %}
-
-</div>
+        {% include projects/project-card.html %}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+{%- endfor -%}

@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^ruby scripts/write_env_config\\.rb$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

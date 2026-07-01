@@ -1,52 +1,228 @@
-// for validating the forms
 (function () {
     'use strict';
-    window.addEventListener(
-        'load', function () {
-            var formObject = $('#contact-form');
-            var form = formObject[0];
-            if (form != undefined) {
-                form.addEventListener(
-                    'submit',
-                    function (event) {
-                        var submitBtn = $('button[name="submit"]')[0];
-                        submitBtn.disabled = true;
-                        submitBtn.innerHTML = 'Sending...';
-                        if (form.checkValidity() === false || form.address.value.length) {
-                            submitBtn.disabled = false;
-                            submitBtn.innerHTML = 'Send';
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        else {
-                            var url = 'https://script.google.com/macros/s/AKfycbz1lkC1JaV2rxX-pzOuqlr6M4PXBVCgP-EvGO15D5KP12B8n0ZEtGjnKHBAzbvx_FiF/exec';
-                            var redirectSuccessUrl = '/thanks';
-                            var redirectFailedUrl = '/failed';
-                            var xhr = $.ajax({
-                                url: url,
-                                method: 'GET',
-                                dataType: 'json',
-                                data: formObject.serialize(),
-                                success: function (data) {
-                                    submitBtn.disabled = false;
-                                    submitBtn.innerHTML = 'Send';
-                                    $(location).attr('href', redirectSuccessUrl);
-                                },
-                                error: function (data) {
-                                    submitBtn.disabled = false;
-                                    submitBtn.innerHTML = 'Send';
-                                    $(location).attr('href', redirectFailedUrl);
-                                },
-                            });
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    },
-                    false
-                );
+
+    var turnstileWidgetId = null;
+    var renderedTheme = null;
+    var isTurnstileVerified = false;
+    var isWatchingTheme = false;
+
+    function onTurnstileLoad() {
+        var form = document.getElementById('contact-form');
+
+        if (!form) {
+            return;
+        }
+
+        renderTurnstile();
+        watchThemeChanges();
+    };
+
+    function renderTurnstile() {
+        var form = document.getElementById('contact-form');
+        var turnstileWidget = document.getElementById('turnstile-widget');
+        var theme = getTurnstileTheme();
+        var sitekey = form ? form.dataset.turnstileSitekey : '';
+
+        if (!form || !turnstileWidget || !window.turnstile || !sitekey) {
+            return;
+        }
+
+        if (turnstileWidgetId !== null && renderedTheme === theme) {
+            return;
+        }
+
+        setTurnstileVerified(form, false);
+
+        if (turnstileWidgetId !== null) {
+            turnstile.remove(turnstileWidgetId);
+            turnstileWidgetId = null;
+        }
+
+        turnstileWidgetId = turnstile.render(turnstileWidget, {
+            sitekey: sitekey,
+            theme: theme,
+            callback: function (token) {
+                setTurnstileVerified(form, Boolean(token));
+            },
+            "error-callback": function (errorCode) {
+                console.error("Turnstile error:", errorCode);
+                setTurnstileVerified(form, false);
+            },
+            "expired-callback": function () {
+                setTurnstileVerified(form, false);
+            },
+            "timeout-callback": function () {
+                setTurnstileVerified(form, false);
             }
-        },
-        false
-    );
+        });
+
+        renderedTheme = theme;
+    }
+
+    function getTurnstileTheme() {
+        return typeof getTheme === "function" && getTheme() === "light" ? "light" : "dark";
+    }
+
+    function watchThemeChanges() {
+        if (isWatchingTheme || !window.MutationObserver) {
+            return;
+        }
+
+        isWatchingTheme = true;
+
+        var observer = new MutationObserver(function (mutations) {
+            var themeChanged = mutations.some(function (mutation) {
+                return mutation.attributeName === "data-theme";
+            });
+
+            if (themeChanged) {
+                renderTurnstile();
+            }
+        });
+
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ["data-theme"]
+        });
+    }
+
+    window.onTurnstileLoad = onTurnstileLoad;
+    window.addEventListener('render', onTurnstileLoad, false);
+
+    window.addEventListener('load', function () {
+        var form = document.getElementById('contact-form');
+
+        if (!form) {
+            return;
+        }
+
+        if (!isTurnstileVerified) {
+            setTurnstileVerified(form, false);
+        }
+
+        if (window.turnstile) {
+            onTurnstileLoad();
+        }
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (!form.checkValidity() || hasHoneypotValue(form) || !isTurnstileVerified) {
+                form.classList.add('was-validated');
+                return;
+            }
+
+            submitForm(form);
+        }, false);
+    }, false);
+
+    function hasHoneypotValue(form) {
+        return form.address && form.address.value.length > 0;
+    }
+
+    function submitForm(form) {
+        var submitBtn = form.querySelector('button[name="submit"]');
+        var endpoint = form.dataset.endpoint;
+        var method = (form.dataset.method || 'GET').toUpperCase();
+        var successUrl = form.dataset.successUrl || '/thanks';
+        var failureUrl = form.dataset.failureUrl || '/failed';
+        var originalText = submitBtn ? submitBtn.textContent : '';
+
+        if (!endpoint) {
+            redirect(failureUrl);
+            return;
+        }
+
+        setButtonState(submitBtn, true, 'Sending...');
+
+        var request = buildRequest(form, endpoint, method);
+        var timeout = createTimeout(15000);
+
+        fetch(request.url, {
+            method: request.method,
+            body: request.body,
+            credentials: 'omit',
+            signal: timeout.signal
+        })
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error('Contact form request failed with status ' + response.status);
+                }
+
+                redirect(successUrl);
+            })
+            .catch(function (error) {
+                console.error(error);
+                setButtonState(submitBtn, false, originalText || 'Send');
+                redirect(failureUrl);
+            })
+            .finally(function () {
+                timeout.clear();
+            });
+    }
+
+    function buildRequest(form, endpoint, method) {
+        var formData = new FormData(form);
+
+        if (method === 'GET') {
+            var params = new URLSearchParams(formData);
+            var separator = endpoint.indexOf('?') === -1 ? '?' : '&';
+
+            return {
+                method: 'GET',
+                url: endpoint + separator + params.toString(),
+                body: undefined
+            };
+        }
+
+        return {
+            method: method,
+            url: endpoint,
+            body: formData
+        };
+    }
+
+    function createTimeout(milliseconds) {
+        if (!window.AbortController) {
+            return {
+                signal: undefined,
+                clear: function () { }
+            };
+        }
+
+        var controller = new AbortController();
+        var timeoutId = window.setTimeout(function () {
+            controller.abort();
+        }, milliseconds);
+
+        return {
+            signal: controller.signal,
+            clear: function () {
+                window.clearTimeout(timeoutId);
+            }
+        };
+    }
+
+    function setButtonState(button, disabled, text) {
+        if (!button) {
+            return;
+        }
+
+        button.disabled = disabled;
+        if (text) {
+            button.textContent = text;
+        }
+    }
+
+    function setTurnstileVerified(form, verified) {
+        var submitBtn = form.querySelector('button[name="submit"]');
+
+        isTurnstileVerified = verified;
+        setButtonState(submitBtn, !verified, null);
+    }
+
+    function redirect(url) {
+        window.location.href = url;
+    }
 })();

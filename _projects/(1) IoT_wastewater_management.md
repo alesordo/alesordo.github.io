@@ -3,6 +3,8 @@ name: IoT wastewater management system
 tools: [c, esp-32, lora, electronic instruments, serial protocols, python, scikit-learn, git, javascript]
 image: ../assets/proj_imgs/wastewater/pcb.webp
 description: Master thesis project. I developed an IoT system to manage wastewaters in health-critical buildings. The system comprehends machine learning models for more intelligent flushing operations.
+category: Thesis
+featured: false
 ---
 
 # IoT wastewater management system
