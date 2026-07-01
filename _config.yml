@@ -150,4 +150,8 @@ exclude:
   - Gemfile.lock
   - package-lock.json
   - scripts
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - .sass-cache
   - "*.log"

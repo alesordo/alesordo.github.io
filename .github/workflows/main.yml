@@ -41,7 +41,7 @@ jobs:
           MATOMO_BASE_URL: ${{ vars.MATOMO_BASE_URL }}
           REMARK42_HOST: ${{ vars.REMARK42_HOST }}
           REMARK42_SITE_ID: ${{ vars.REMARK42_SITE_ID }}
-          PAGES_CNAME: ${{ varsPAGES_CNAMEE }}
+          PAGES_CNAME: ${{ vars.PAGES_CNAME }}
           CONTACT_FORM_ENDPOINT: ${{ secrets.CONTACT_FORM_ENDPOINT }}
           CONTACT_FORM_METHOD: ${{ vars.CONTACT_FORM_METHOD }}
           CLOUDFLARE_TURNSTILE_SITE_KEY: ${{ secrets.CLOUDFLARE_TURNSTILE_SITE_KEY }}
