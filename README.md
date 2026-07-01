@@ -49,7 +49,7 @@ Runtime and deployment-specific values are declared in `config/env.yml` and read
 | `MATOMO_BASE_URL` | Analytics | Matomo host URL, without the trailing path. |
 | `REMARK42_HOST` | Comments | Remark42 host URL, without the trailing path. |
 | `REMARK42_SITE_ID` | Comments | Remark42 site id for this repository. |
-| `GITHUB_PAGES_CNAME` | GitHub Pages | Custom domain written to `CNAME`. |
+| `PAGES_CNAME` | GitHub Pages | Custom domain written to `CNAME`. |
 | `CONTACT_FORM_ENDPOINT` | Contact form | Full backend endpoint URL for contact submissions. Store it as a GitHub secret. |
 | `CONTACT_FORM_METHOD` | Contact form | Optional. Defaults to `POST`. |
 | `CLOUDFLARE_TURNSTILE_SITE_KEY` | Contact form | Store it as a GitHub secret. It is still visible in the rendered static site. |
@@ -64,7 +64,7 @@ $env:PRIVACY_CONTACT_EMAIL = "privacy@example.com"
 $env:MATOMO_BASE_URL = "https://matomo.example.com"
 $env:REMARK42_HOST = "https://remark42.example.com"
 $env:REMARK42_SITE_ID = "remark42.example"
-$env:GITHUB_PAGES_CNAME = "www.example.com"
+$env:PAGES_CNAME = "www.example.com"
 $env:CONTACT_FORM_ENDPOINT = "https://example.com/api/v1/contact/messages"
 $env:CONTACT_FORM_METHOD = "POST"
 $env:CLOUDFLARE_TURNSTILE_SITE_KEY = "example-site-key"
@@ -90,7 +90,7 @@ For a more detailed guide, always refer to the portfolYOU official [documentatio
 ## How to deploy this website online
 There are [many ways](https://jekyllrb.com/docs/deployment/third-party/#:~:text=Sites%20on%20GitHub%20Pages%20are,Jekyll%2Dpowered%20website%20for%20free.) to deploy Jekyll websites remotely. What I used are GitHub pages. If you want to take a look at how they work, refer to the [original guide by GitHub](https://docs.github.com/en/pages/quickstart).
 
-This repository includes a GitHub Actions workflow for GitHub Pages. In the repository settings, set **Pages > Build and deployment > Source** to **GitHub Actions**. Then configure repository variables for public build values such as `SITE_URL`, `SITE_BASEURL`, `AUTHOR_URL`, `PRIVACY_CONTACT_EMAIL`, `MATOMO_BASE_URL`, `REMARK42_HOST`, `REMARK42_SITE_ID`, and `GITHUB_PAGES_CNAME`. Keep `CONTACT_FORM_ENDPOINT` and `CLOUDFLARE_TURNSTILE_SITE_KEY` as repository secrets.
+This repository includes a GitHub Actions workflow for GitHub Pages. In the repository settings, set **Pages > Build and deployment > Source** to **GitHub Actions**. Then configure repository variables for public build values such as `SITE_URL`, `SITE_BASEURL`, `AUTHOR_URL`, `PRIVACY_CONTACT_EMAIL`, `MATOMO_BASE_URL`, `REMARK42_HOST`, `REMARK42_SITE_ID`, and `PAGES_CNAME`. Keep `CONTACT_FORM_ENDPOINT` and `CLOUDFLARE_TURNSTILE_SITE_KEY` as repository secrets.
 
 The environment-variable setup is meant for the included GitHub Actions workflow or any Jekyll build that first runs `scripts/write_env_config.rb` and passes `.jekyll-env.yml` through `--config`. GitHub Pages' native branch-based build does not expose repository secrets to Jekyll or run custom pre-build scripts. If you add a new configurable value, declare it in `config/env.yml`, add it to `.env.example`, and expose it in the workflow `env:` block if GitHub Actions needs it.
 

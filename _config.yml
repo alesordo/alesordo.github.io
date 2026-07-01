@@ -97,7 +97,7 @@ remark42:
 
 ### GitHub Pages ###
 github_pages:
-  cname             : ""                             # Override with GITHUB_PAGES_CNAME
+  cname             : ""                             # Override with PAGES_CNAME
 
 
 ### Contact Form ###
