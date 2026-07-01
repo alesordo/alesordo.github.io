@@ -3,7 +3,7 @@ title               : Alessio Sordo
 tagline             : Alessio Sordo's personal website.
 description         : >-
                       Software Engineer building scalable backend payment systems with applied experience in AI infrastructure, RAG, and LLM evaluation.
-baseurl             : "/"                            # Override with SITE_BASEURL when deploying somewhere else
+baseurl             : ""                            # Override with SITE_BASEURL when deploying somewhere else
 url                 : ""                             # Override with SITE_URL in deployment environments
 repository          : alesordo/alesordo.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 # remote_theme        : YoussefRaafatNasry/portfolYOU
