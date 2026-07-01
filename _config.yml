@@ -39,7 +39,7 @@ nav_exclude:                                            # The following paths ar
 author:
   name              : Alessio Sordo
   picture           : assets/profile-picture.webp
-  url               : https://alesordo.com
+  url               : ""                             # Override with AUTHOR_URL
 #  behance           : your_username
 # dribbble          : your_username
   email             : /contact
@@ -81,6 +81,23 @@ collections:
 ### Analytics ###
 analytics:
   enabled: true                                        # Set true to enable analytics
+  url               : ""                             # Override with MATOMO_BASE_URL
+
+
+### Privacy Policy ###
+privacy:
+  contact_email     : ""                             # Override with PRIVACY_CONTACT_EMAIL
+
+
+### Remark42 ###
+remark42:
+  host              : ""                             # Override with REMARK42_HOST
+  site_id           : ""                             # Override with REMARK42_SITE_ID
+
+
+### GitHub Pages ###
+github_pages:
+  cname             : ""                             # Override with GITHUB_PAGES_CNAME
 
 
 ### Contact Form ###

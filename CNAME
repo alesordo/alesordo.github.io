@@ -1,1 +1,3 @@
-www.alesordo.com
+---
+---
+{{ site.github_pages.cname }}

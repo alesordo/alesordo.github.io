@@ -63,12 +63,22 @@ end
 manifest = YAML.load_file(manifest_path)
 dotenv_values = parse_dotenv(DEFAULT_DOTENV_PATH)
 config = {}
+missing_required = []
+strict_mode = ENV["STRICT_ENV_CONFIG"] == "1"
 
 Array(manifest).each do |entry|
   env_name = entry.fetch("env")
   config_path = entry.fetch("path")
+  required = entry["required"] == true
 
-  set_nested(config, config_path, env_value(env_name, dotenv_values))
+  value = env_value(env_name, dotenv_values)
+  missing_required << env_name if strict_mode && required && value.nil?
+
+  set_nested(config, config_path, value)
+end
+
+unless missing_required.empty?
+  raise "Missing required environment values: #{missing_required.join(', ')}"
 end
 
 File.write(output_path, config.to_yaml)
