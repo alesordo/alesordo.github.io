@@ -33,6 +33,15 @@ cd <directory-where-you-cloned-the-repo>  # To move on the right directory
 bundle install                            # To install the needed Ruby Gems
 bundle exec jekyll serve                  # To run the demo
 ```
+
+Alternatively, use these commands  - these were lastly run successfully on Windows, previous commands may not work after the introduction of environment variables:
+```
+cd <directory-where-you-cloned-the-repo>  # To move on the right directory
+bundle install                            # To install the needed Ruby Gems
+ruby scripts/write_env_config.rb
+ruby scripts/jekyll_local.rb serve --config _config.yml,.jekyll-env.ym
+```
+
 Afterwards, you should see something like `Server running... press ctrl-c to stop.`.
 
 If so, go on your browser, type `localhost:4000` and see the magic happen 🧙!
